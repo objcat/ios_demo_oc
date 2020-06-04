@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  demo
+//
+//  Created by 张祎 on 2020/6/4
+//  Copyright © 2020 objcat. All rights reserved.
+//
+    
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// ZYKit
+#import "ZYUserInfo.h"
+
+// tools
+#import <Masonry.h>
+#import <Reachability.h>
+#import <ReactiveCocoa.h>
+
+#endif /* PrefixHeader_pch */
