@@ -21,6 +21,7 @@
     // Do any additional setup after loading the view from its nib.
     [self createTableView];
     self.baseTitleView.titleLabel.text = @"首页";
+    self.baseTitleView.titleLabel.textColor = COLORHEX(@"#409EFF");
 }
 
 - (void)createTableView {

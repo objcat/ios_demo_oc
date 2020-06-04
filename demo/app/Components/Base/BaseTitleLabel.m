@@ -12,10 +12,11 @@
 @implementation BaseTitleLabel
 
 - (void)setText:(NSString *)text {
+    
     NSString *str = text;
     // 设置文字显示个数
-    if (text.length > 10) {
-        str = [[text substringToIndex:10] stringByAppendingFormat:@"..."];
+    if (text.length > self.maxTextNum) {
+        str = [[text substringToIndex:self.maxTextNum] stringByAppendingFormat:@"..."];
     }
     
     // 文字改变执行代理
@@ -23,7 +24,7 @@
         [self.delegate textDidSet:text];
     }
     
-    [super setText:text];
+    [super setText:str];
 }
 
 @end

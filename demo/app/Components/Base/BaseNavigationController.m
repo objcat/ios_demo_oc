@@ -17,26 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 为保证导航栏不透明且透明度是透明的 使用99%白色图片背景 这样不会打乱布局起始位置的坐标
+    // 设置导航栏背景颜色, 这里使用99%透明度的图片作为背景, 既做到了不透明又不影响初始坐标系
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bar_image"] forBarMetrics:UIBarMetricsDefault];
 }
 
-// 自动隐藏tabBar
+// push页面后自动隐藏tabBar
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.viewControllers.count >= 1) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

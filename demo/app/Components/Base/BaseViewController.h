@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 自定义titleView
- * 可以方便的控制文字颜色
  */
 @property (strong, nonatomic) BaseTitleView *baseTitleView;
 

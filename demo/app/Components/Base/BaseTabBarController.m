@@ -24,7 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    /**
+     * 自定义tabBar
+     * 这里可以对tabBar无限制进行自定义
+     */
+    
     // 设置样式
     [self setupStyles];
     // 设置子控制器
@@ -32,7 +37,12 @@
 }
 
 - (void)setupStyles {
+    // 设置tabBar背景颜色, 这里使用99%透明度的图片作为背景, 既做到了不透明又不影响初始坐标系
     [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_color_image"]];
+    // 设置未选中标题颜色
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:RGBA(73, 73, 73, 1)} forState:UIControlStateNormal];
+    // 设置选中后标题颜色
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:RGBA(6, 181, 141, 1)} forState:UIControlStateSelected];
 }
 
 - (void)setupControllers {
@@ -41,7 +51,7 @@
     NSMutableArray *viewControllers = [NSMutableArray array];
     
     /**
-     * 使用 {} 区分作用域使得命名可以重复
+     * 使用 {} 隔离作用域使得命名可以重复
      */
     
     {

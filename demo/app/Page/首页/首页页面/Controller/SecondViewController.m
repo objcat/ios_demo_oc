@@ -15,6 +15,15 @@
 
 @implementation SecondViewController
 
+- (BOOL)navigationShouldPopOnBackButton {
+    
+    
+    NSLog(@"123");
+    
+    
+    return NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
