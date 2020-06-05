@@ -13,7 +13,7 @@
  *  可以改成你想要的名称
  *  建议不要命名成"info"这类过于简单的字样 容易发生冲突
  */
-#define x_ud [ZYUserDefaults shareInstance]
+#define x_store [ZYUserDefaults shareInstance]
 
 /**
  *  数据存储工具类

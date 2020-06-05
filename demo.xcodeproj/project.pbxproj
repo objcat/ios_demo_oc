@@ -10,6 +10,7 @@
 		9A818E472489E1FD003EC518 /* NSString+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E452489E1FD003EC518 /* NSString+ZYExtension.m */; };
 		9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E4D2489E494003EC518 /* NSDate+ZYExtension.m */; };
 		9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */; };
+		9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */; };
 		9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6702488C001000FA565 /* AppDelegate.m */; };
 		9AD7A67A2488C001000FA565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A6782488C001000FA565 /* Main.storyboard */; };
 		9AD7A67C2488C003000FA565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A67B2488C003000FA565 /* Assets.xcassets */; };
@@ -42,10 +43,10 @@
 		9A818E462489E1FD003EC518 /* NSString+ZYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZYExtension.h"; sourceTree = "<group>"; };
 		9A818E4D2489E494003EC518 /* NSDate+ZYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZYExtension.m"; sourceTree = "<group>"; };
 		9A818E4E2489E494003EC518 /* NSDate+ZYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZYExtension.h"; sourceTree = "<group>"; };
-		9A818E532489E6A8003EC518 /* ZYUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
-		9A818E542489E6A8003EC518 /* ZYUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
 		9A818E552489E83E003EC518 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		9A818E5A2489ECD0003EC518 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
+		9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
 		9AD7A66C2488C001000FA565 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD7A66F2488C001000FA565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AD7A6702488C001000FA565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,7 +121,7 @@
 		9A818E502489E680003EC518 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				9A818E522489E6A8003EC518 /* ZYUserInfo */,
+				9A818E592489ECD0003EC518 /* ZYUserDefaults */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -136,15 +137,6 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		9A818E522489E6A8003EC518 /* ZYUserInfo */ = {
-			isa = PBXGroup;
-			children = (
-				9A818E532489E6A8003EC518 /* ZYUserDefaults.h */,
-				9A818E542489E6A8003EC518 /* ZYUserDefaults.m */,
-			);
-			path = ZYUserInfo;
-			sourceTree = "<group>";
-		};
 		9A818E582489E844003EC518 /* UIViewController+BackButtonHandler */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +144,15 @@
 				9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */,
 			);
 			path = "UIViewController+BackButtonHandler";
+			sourceTree = "<group>";
+		};
+		9A818E592489ECD0003EC518 /* ZYUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9A818E5A2489ECD0003EC518 /* ZYUserDefaults.h */,
+				9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */,
+			);
+			path = ZYUserDefaults;
 			sourceTree = "<group>";
 		};
 		9AD7A6632488C001000FA565 = {
@@ -642,6 +643,7 @@
 				9AD7A71B2488D46F000FA565 /* NewsViewController.m in Sources */,
 				9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */,
 				9AD7A7222488D523000FA565 /* BaseTabBarController.m in Sources */,
+				9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */,
 				9AD7A6C42488D056000FA565 /* MainViewController.m in Sources */,
 				9AD7A6C82488D0D8000FA565 /* BaseNavigationController.m in Sources */,
 			);

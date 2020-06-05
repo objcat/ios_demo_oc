@@ -20,14 +20,17 @@
  *  单例
  */
 + (instancetype)shareInstance {
-    static ZYUserInfo *info = nil;
+    static ZYUserDefaults *info = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        info = [[ZYUserInfo alloc] init];
+        info = [[ZYUserDefaults alloc] init];
+        // 设置ud路径
         info.ud = [[NSUserDefaults alloc] initWithSuiteName:@"zy_ud"];
+        // 绑定数据
         [info bindData];
+        // 监听数据变化
         [info addObserver];
-        NSLog(@"ZYUserInfo启动成功, 保存路径: \n %@/Preferences/zy_info.plist", [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject]);
+        NSLog(@"ZYUserDefaults启动成功, 保存路径: \n %@/Preferences/zy_ud.plist", [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject]);
     });
     return info;
 }
@@ -126,10 +129,6 @@
 
 - (void)dealloc {
     // 由于是单例 所以不用担心释放的问题 固不用移除
-    //        NSArray *propertys = self.propertyList;
-    //        for (NSString *property in propertys) {
-    //            [self removeObserver:self forKeyPath:property];
-    //        }
 }
 
 @end
