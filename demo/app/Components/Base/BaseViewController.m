@@ -18,8 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
-    //    self.navigationItem.backBarButtonItem = backItem;
 }
 
 /**
@@ -44,6 +42,16 @@
         }];
     }
     return _baseTitleView;
+}
+
+/**
+ * 打印控制器释放, 非常重要一定要写
+ * 经常导致控制器不能释放的问题, 归根结底就是对象被持有了, 只要引用计数>0, 对象就永远不会被释放
+ * 1.block没有使用weakSelf
+ * 2.子类持有父类对象使用了strong, 没有使用weak
+ */
+- (void)dealloc {
+    NSLog(@"控制器释放---%@", NSStringFromClass([self class]));
 }
 
 @end

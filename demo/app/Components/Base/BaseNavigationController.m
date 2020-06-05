@@ -40,7 +40,6 @@
     
     // 这里利用了导航栏的特性 判断了是"点击返回按钮"还是执行了"popViewControllerAnimated"方法, 从而使得 popViewControllerAnimated 方法可以顺利的pop控制器
     if([self.viewControllers count] < [navigationBar.items count]) {
-        NSLog(@"%ld %ld", self.viewControllers.count, navigationBar.items.count);
         return YES;
     }
 

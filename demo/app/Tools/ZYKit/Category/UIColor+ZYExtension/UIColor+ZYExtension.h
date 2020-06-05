@@ -1,6 +1,6 @@
 //
-//  UIColor+Extension.h
-//  EGShellProject
+//  UIColor+ZYExtension.h
+//  ZYKit
 //
 //  Created by 张祎 on 2019/4/17.
 //  Copyright © 2019年 objcat. All rights reserved.
@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (Extension)
+@interface UIColor (ZYExtension)
 
 /** 主要颜色 */
 @property (class, readonly) UIColor *mainColor;

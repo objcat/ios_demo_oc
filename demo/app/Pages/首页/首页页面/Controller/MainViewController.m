@@ -67,10 +67,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     SecondViewController *second = [[SecondViewController alloc] init];
     [self.navigationController pushViewController:second animated:YES];
-    
 }
 
 @end

@@ -1,6 +1,6 @@
 //
-//  UIView+Extension.h
-//  EGShellProject
+//  UIView+ZYExtension.h
+//  ZYKit
 //
 //  Created by 张祎 on 2019/4/17.
 //  Copyright © 2019年 objcat. All rights reserved.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (Extension)
+@interface UIView (ZYExtension)
 @property (nonatomic, assign) CGFloat left;
 @property (nonatomic, assign) CGFloat right;
 @property (nonatomic, assign) CGFloat top;

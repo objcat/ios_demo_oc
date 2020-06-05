@@ -1,14 +1,15 @@
 //
-//  UIView+Extension.m
-//  EGShellProject
+//  UIView+ZYExtension.m
+//  ZYKit
 //
 //  Created by 张祎 on 2019/4/17.
 //  Copyright © 2019年 objcat. All rights reserved.
 //
 
-#import "UIView+Extension.h"
+#import "UIView+ZYExtension.h"
 
-@implementation UIView (Extension)
+@implementation UIView (ZYExtension)
+
 - (CGFloat)left {
     return self.frame.origin.x;
 }
@@ -104,4 +105,5 @@
     frame.size = size;
     self.frame = frame;
 }
+
 @end

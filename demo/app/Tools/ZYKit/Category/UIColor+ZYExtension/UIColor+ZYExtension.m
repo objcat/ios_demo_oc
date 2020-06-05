@@ -1,14 +1,14 @@
 //
-//  UIColor+Extension.m
-//  EGShellProject
+//  UIColor+ZYExtension.m
+//  ZYKit
 //
 //  Created by 张祎 on 2019/4/17.
 //  Copyright © 2019年 objcat. All rights reserved.
 //
 
-#import "UIColor+Extension.h"
+#import "UIColor+ZYExtension.h"
 
-@implementation UIColor (Extension)
+@implementation UIColor (ZYExtension)
 
 + (UIColor *)colorWithHexString:(NSString *)hexString {
     
