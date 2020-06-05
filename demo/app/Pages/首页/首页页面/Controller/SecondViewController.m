@@ -8,7 +8,6 @@
     
 
 #import "SecondViewController.h"
-#import "ZYKeyboardAccessoryView.h"
 
 @interface SecondViewController ()
 
@@ -45,24 +44,6 @@
     textField2.frame = CGRectMake(100, 600, 100, 40);
     textField2.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:textField2];
-    
-
-    
-    
-    
-//    ZYKeyboardAccessoryView *keyboardView = [[NSBundle mainBundle] loadNibNamed:@"ZYKeyboardAccessoryView" owner:nil options:nil][0];
-//    keyboardView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44);
-//    textField.inputAccessoryView = keyboardView;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
