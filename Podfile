@@ -8,4 +8,5 @@ target 'demo' do
   pod 'MJRefresh'
   pod 'SVProgressHUD'
   pod 'ReactiveCocoa', '2.5'
+  pod 'IQKeyboardManager'
 end

@@ -8,6 +8,7 @@
     
 
 #import "SecondViewController.h"
+#import "ZYKeyboardAccessoryView.h"
 
 @interface SecondViewController ()
 
@@ -34,6 +35,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor cyanColor];
+    
+    UITextField *textField = [[UITextField alloc] init];
+    textField.frame = CGRectMake(100, 500, 100, 40);
+    textField.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:textField];
+    
+    UITextField *textField2 = [[UITextField alloc] init];
+    textField2.frame = CGRectMake(100, 600, 100, 40);
+    textField2.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:textField2];
+    
+
+    
+    
+    
+//    ZYKeyboardAccessoryView *keyboardView = [[NSBundle mainBundle] loadNibNamed:@"ZYKeyboardAccessoryView" owner:nil options:nil][0];
+//    keyboardView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44);
+//    textField.inputAccessoryView = keyboardView;
 }
 
 /*

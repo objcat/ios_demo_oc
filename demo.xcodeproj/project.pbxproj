@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64F2288AAD9B3E70922A1F19 /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5401D1DE10C35D3402A16E1 /* libPods-demo.a */; };
 		9A818E472489E1FD003EC518 /* NSString+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E452489E1FD003EC518 /* NSString+ZYExtension.m */; };
 		9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E4D2489E494003EC518 /* NSDate+ZYExtension.m */; };
 		9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */; };
 		9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */; };
+		9A818E652489FE19003EC518 /* ZYKeyboardAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E642489FE19003EC518 /* ZYKeyboardAccessoryView.m */; };
+		9A818E672489FE21003EC518 /* ZYKeyboardAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818E662489FE21003EC518 /* ZYKeyboardAccessoryView.xib */; };
 		9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6702488C001000FA565 /* AppDelegate.m */; };
 		9AD7A67A2488C001000FA565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A6782488C001000FA565 /* Main.storyboard */; };
 		9AD7A67C2488C003000FA565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A67B2488C003000FA565 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		9A818E5A2489ECD0003EC518 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
 		9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
+		9A818E632489FE19003EC518 /* ZYKeyboardAccessoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYKeyboardAccessoryView.h; sourceTree = "<group>"; };
+		9A818E642489FE19003EC518 /* ZYKeyboardAccessoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYKeyboardAccessoryView.m; sourceTree = "<group>"; };
+		9A818E662489FE21003EC518 /* ZYKeyboardAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYKeyboardAccessoryView.xib; sourceTree = "<group>"; };
 		9AD7A66C2488C001000FA565 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD7A66F2488C001000FA565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AD7A6702488C001000FA565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F2288AAD9B3E70922A1F19 /* libPods-demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +160,16 @@
 				9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */,
 			);
 			path = ZYUserDefaults;
+			sourceTree = "<group>";
+		};
+		9A818E622489FDEA003EC518 /* ZYKeyboardAccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				9A818E632489FE19003EC518 /* ZYKeyboardAccessoryView.h */,
+				9A818E642489FE19003EC518 /* ZYKeyboardAccessoryView.m */,
+				9A818E662489FE21003EC518 /* ZYKeyboardAccessoryView.xib */,
+			);
+			path = ZYKeyboardAccessoryView;
 			sourceTree = "<group>";
 		};
 		9AD7A6632488C001000FA565 = {
@@ -285,6 +302,7 @@
 		9AD7A6C92488D1F2000FA565 /* ZYKit */ = {
 			isa = PBXGroup;
 			children = (
+				9A818E622489FDEA003EC518 /* ZYKeyboardAccessoryView */,
 				9A818E512489E695003EC518 /* Category */,
 				9A818E502489E680003EC518 /* Util */,
 			);
@@ -576,6 +594,7 @@
 				9AD7A72D2488E26A000FA565 /* BaseTitleView.xib in Resources */,
 				9AD7A7172488D459000FA565 /* MineViewController.xib in Resources */,
 				9AD7A71C2488D46F000FA565 /* NewsViewController.xib in Resources */,
+				9A818E672489FE21003EC518 /* ZYKeyboardAccessoryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +656,7 @@
 				9AD7A7162488D459000FA565 /* MineViewController.m in Sources */,
 				9AD7A6822488C003000FA565 /* main.m in Sources */,
 				9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */,
+				9A818E652489FE19003EC518 /* ZYKeyboardAccessoryView.m in Sources */,
 				9AD7A7322488E98D000FA565 /* BaseTitleLabel.m in Sources */,
 				9AD7A72B2488E261000FA565 /* BaseTitleView.m in Sources */,
 				9AD7A70E2488D3C7000FA565 /* AppViewController.m in Sources */,
