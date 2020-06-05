@@ -21,7 +21,9 @@
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bar_image"] forBarMetrics:UIBarMetricsDefault];
 }
 
-// push页面后自动隐藏tabBar
+/**
+ * push页面后自动隐藏tabBar
+ */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.viewControllers.count >= 1) {
         viewController.hidesBottomBarWhenPushed = YES;

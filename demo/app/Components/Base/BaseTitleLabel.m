@@ -14,6 +14,7 @@
 - (void)setText:(NSString *)text {
     
     NSString *str = text;
+    
     // 设置文字显示个数
     if (text.length > self.maxTextNum) {
         str = [[text substringToIndex:self.maxTextNum] stringByAppendingFormat:@"..."];

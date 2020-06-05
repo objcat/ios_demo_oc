@@ -17,7 +17,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
     self.titleLabel.delegate = self;
 }
 

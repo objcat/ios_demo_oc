@@ -3,7 +3,7 @@
 //  EGShellProject
 //
 //  Created by 张祎 on 2019/4/17.
-//  Copyright © 2019年 Netease. All rights reserved.
+//  Copyright © 2019年 objcat. All rights reserved.
 //
 
 #import "UIColor+Extension.h"

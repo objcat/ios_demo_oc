@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (Extension)
 
-// 主要颜色
+/** 主要颜色 */
 @property (class, readonly) UIColor *mainColor;
 
 /**
@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 
+/**
+ * 判断颜色是否相同
+ */
 - (BOOL)isEqualToColor:(UIColor *)color;
 
 @end

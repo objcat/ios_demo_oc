@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseTitleLabel : UILabel
 /**
- * 设置标题最多字数, 超出...
+ * 设置标题最多字数, 超出显示...
  */
 @property (assign, nonatomic) NSInteger maxTextNum;
 @property (weak, nonatomic) id <BaseTitleLabelDelegate> delegate;
