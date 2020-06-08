@@ -38,7 +38,7 @@
     }];
     
     [tableView addNormalRowWithName:@"ZYKit" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        
+        [weakSelf.view makeToast:@"待完善哦" duration:2 position:CSToastPositionCenter];
     }];
 }
 

@@ -54,6 +54,6 @@
 /// 富文本placeHolder
 @property (strong, nonatomic) NSAttributedString *attributedPlaceHolder;
 /// 扩展属性补充
-- (void)eh_attributed:(void (^) (EHFormModel *model))attributed;
+- (void)eh_attributed:(void (^) (EHFormModel *attributed))attributed;
 
 @end

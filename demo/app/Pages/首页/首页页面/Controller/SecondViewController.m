@@ -27,12 +27,14 @@
     tableView.frame = self.view.bounds;
     [self.view addSubview:tableView];
     
+    __weak typeof(self) weakSelf = self;
+    
     [tableView addNormalRowWithName:@"UILabel" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        
+        [weakSelf.view makeToast:model.name duration:2 position:CSToastPositionCenter];
     }];
     
     [tableView addNormalRowWithName:@"UITextField" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        
+        [weakSelf.view makeToast:model.name duration:2 position:CSToastPositionCenter];
     }];
     
 }
