@@ -20,47 +20,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.baseTitleView.titleLabel.text = @"首页";
+    self.baseTitleView.titleLabel.text = @"Demo案例";
     self.baseTitleView.titleLabel.textColor = COLORHEX(@"#409EFF");
-    NSLog(@"%@", NSStringFromCGRect(self.view.bounds));
-    NSLog(@"%@", NSStringFromCGRect([UIScreen mainScreen].bounds));
+    self.baseTitleView.titleLabel.font = [UIFont systemFontOfSize:25];
     [self createTableView];
 }
 
 - (void)createTableView {
-    self.tableView = [EHFormTableView tableView];
-    self.tableView.frame = self.view.bounds;
-    [self.view addSubview:self.tableView];
+    EHFormTableView *tableView = [EHFormTableView tableView];
+    tableView.frame = self.view.bounds;
+    [self.view addSubview:tableView];
+    self.tableView = tableView;
     
     __weak typeof(self) weakSelf = self;
-    
-    [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:16 separatorHeight:0 separatorColor:nil separatorOffset:0];
-    
-    [self.tableView addNormalRowWithName:@"个人资料" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"原生组件" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf performSegueWithIdentifier:@"SecondViewController" sender:nil];
     }];
     
-    [self.tableView addNormalRowWithName:@"客服电话" value:@"1388888888" cell:@"EHPhoneNumberTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"ZYKit" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        
     }];
-    
-    [[self.tableView addUnableTapRowWithName:@"消息免打扰" value:nil cell:@"EHSwitchTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        if (model.on) {
-            NSLog(@"开关on");
-        } else {
-            NSLog(@"开关off");
-        }
-    }] eh_attributed:^(EHFormModel *model) {
-        // 设置开关默认值
-        model.on = YES;
-    }];
-    
-    [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:16 separatorHeight:0 separatorColor:nil separatorOffset:0];
-    
-    [self.tableView addNormalRowWithName:@"个人资料" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-    }];
-    
-    
-    
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"%@", segue.destinationViewController);
+}
 
 @end

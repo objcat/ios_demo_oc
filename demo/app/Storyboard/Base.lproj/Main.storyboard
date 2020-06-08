@@ -12,31 +12,18 @@
         <scene sceneID="Qp6-B7-2hx">
             <objects>
                 <viewController id="SR7-n2-akG" customClass="MainViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="f4g-S5-Lmy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRl-Ra-HaH">
-                                <rect key="frame" x="179" y="142" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="jxQ-Wr-Bf6" kind="push" id="KwR-vm-hLj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="TZk-ff-y12"/>
-                    </view>
+                    <connections>
+                        <segue destination="jxQ-Wr-Bf6" kind="push" identifier="SecondViewController" id="PjK-Rk-T5I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPR-DC-D1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="64"/>
+            <point key="canvasLocation" x="-413" y="64"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="uIF-Dh-GTU">
             <objects>
-                <viewController id="jxQ-Wr-Bf6" sceneMemberID="viewController">
+                <viewController id="jxQ-Wr-Bf6" customClass="SecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="grG-Gf-ZZn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="545-XR-BTz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="64"/>
+            <point key="canvasLocation" x="565" y="64"/>
         </scene>
     </scenes>
 </document>

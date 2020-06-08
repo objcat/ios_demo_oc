@@ -20,15 +20,19 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 初始化window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 设置主视图控制器
     [self setupMain];
+    // 设置IQ
     [self configIQKeyboard];
+    // 让window显示在屏幕上
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 - (void)setupMain {
+    // 自定义tabBarController
     self.window.rootViewController = [[BaseTabBarController alloc] init];
 }
 
