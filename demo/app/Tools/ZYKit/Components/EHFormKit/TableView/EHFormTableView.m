@@ -38,6 +38,11 @@
 
 @implementation EHFormTableView
 
++ (instancetype)tableView {
+    EHFormTableView *tableView = [[self alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    return tableView;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     self = [super initWithFrame:frame style:style];
     if (self) {

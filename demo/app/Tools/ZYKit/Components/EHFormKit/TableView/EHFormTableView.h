@@ -17,6 +17,9 @@
 /// 快速构建表单工具
 @interface EHFormTableView : UITableView
 
+/// 初始化方法, 默认frame是CGRectZero
++ (instancetype)tableView;
+
 /// 数据源
 @property (strong, nonatomic, readonly) NSMutableArray *sourceArray;
 /// 索引数组
@@ -64,7 +67,7 @@
                             rowHeight:(CGFloat)rowHeight
                              callBack:(void (^) (EHFormModel *model))callBack;
 
- ///插入不能点击的表单
+///插入不能点击的表单
 /// @param name 名称
 /// @param value 值
 /// @param cell 类型

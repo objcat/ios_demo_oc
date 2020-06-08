@@ -7,42 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64F2288AAD9B3E70922A1F19 /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5401D1DE10C35D3402A16E1 /* libPods-demo.a */; };
+		9A497D2F248DF80600396DF7 /* EHFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D0B248DF80600396DF7 /* EHFormTableView.m */; };
+		9A497D30248DF80600396DF7 /* EHFormResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D0D248DF80600396DF7 /* EHFormResources.bundle */; };
+		9A497D31248DF80600396DF7 /* EHWhiteRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D10248DF80600396DF7 /* EHWhiteRowTableViewCell.m */; };
+		9A497D32248DF80600396DF7 /* EHPhoneNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D14248DF80600396DF7 /* EHPhoneNumberTableViewCell.m */; };
+		9A497D33248DF80600396DF7 /* EHPhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D15248DF80600396DF7 /* EHPhoneNumberTableViewCell.xib */; };
+		9A497D34248DF80600396DF7 /* EHButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D17248DF80600396DF7 /* EHButtonTableViewCell.m */; };
+		9A497D35248DF80600396DF7 /* EHFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D1A248DF80600396DF7 /* EHFormTableViewCell.m */; };
+		9A497D36248DF80600396DF7 /* EHSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D1D248DF80600396DF7 /* EHSwitchTableViewCell.m */; };
+		9A497D37248DF80600396DF7 /* EHSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D1E248DF80600396DF7 /* EHSwitchTableViewCell.xib */; };
+		9A497D38248DF80600396DF7 /* EHTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D22248DF80600396DF7 /* EHTapTableViewCell.xib */; };
+		9A497D39248DF80600396DF7 /* EHTapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D23248DF80600396DF7 /* EHTapTableViewCell.m */; };
+		9A497D3A248DF80600396DF7 /* EHTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D25248DF80600396DF7 /* EHTextFieldTableViewCell.xib */; };
+		9A497D3B248DF80600396DF7 /* EHTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D26248DF80600396DF7 /* EHTextFieldTableViewCell.m */; };
+		9A497D3C248DF80600396DF7 /* EHLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D2A248DF80600396DF7 /* EHLabelTableViewCell.m */; };
+		9A497D3D248DF80600396DF7 /* EHLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D2B248DF80600396DF7 /* EHLabelTableViewCell.xib */; };
+		9A497D3E248DF80600396DF7 /* EHFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A497D2D248DF80600396DF7 /* EHFormModel.m */; };
+		9A497D41248DFE4900396DF7 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D40248DFE4900396DF7 /* App.storyboard */; };
+		9A497D43248DFE5400396DF7 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D42248DFE5400396DF7 /* News.storyboard */; };
+		9A497D45248DFE5C00396DF7 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D44248DFE5C00396DF7 /* Mine.storyboard */; };
 		9A818E472489E1FD003EC518 /* NSString+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E452489E1FD003EC518 /* NSString+ZYExtension.m */; };
 		9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E4D2489E494003EC518 /* NSDate+ZYExtension.m */; };
 		9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */; };
 		9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */; };
-		9A818ECE248A1274003EC518 /* EHFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EAA248A1273003EC518 /* EHFormTableView.m */; };
-		9A818ECF248A1274003EC518 /* EHFormResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A818EAC248A1274003EC518 /* EHFormResources.bundle */; };
-		9A818ED0248A1274003EC518 /* EHWhiteRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EAF248A1274003EC518 /* EHWhiteRowTableViewCell.m */; };
-		9A818ED1248A1274003EC518 /* EHPhoneNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EB3248A1274003EC518 /* EHPhoneNumberTableViewCell.m */; };
-		9A818ED2248A1274003EC518 /* EHPhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818EB4248A1274003EC518 /* EHPhoneNumberTableViewCell.xib */; };
-		9A818ED3248A1274003EC518 /* EHButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EB6248A1274003EC518 /* EHButtonTableViewCell.m */; };
-		9A818ED4248A1274003EC518 /* EHFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EB9248A1274003EC518 /* EHFormTableViewCell.m */; };
-		9A818ED5248A1274003EC518 /* EHSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EBC248A1274003EC518 /* EHSwitchTableViewCell.m */; };
-		9A818ED6248A1274003EC518 /* EHSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818EBD248A1274003EC518 /* EHSwitchTableViewCell.xib */; };
-		9A818ED7248A1274003EC518 /* EHTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818EC1248A1274003EC518 /* EHTapTableViewCell.xib */; };
-		9A818ED8248A1274003EC518 /* EHTapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EC2248A1274003EC518 /* EHTapTableViewCell.m */; };
-		9A818ED9248A1274003EC518 /* EHTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818EC4248A1274003EC518 /* EHTextFieldTableViewCell.xib */; };
-		9A818EDA248A1274003EC518 /* EHTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EC5248A1274003EC518 /* EHTextFieldTableViewCell.m */; };
-		9A818EDB248A1274003EC518 /* EHLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818EC9248A1274003EC518 /* EHLabelTableViewCell.m */; };
-		9A818EDC248A1274003EC518 /* EHLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818ECA248A1274003EC518 /* EHLabelTableViewCell.xib */; };
-		9A818EDD248A1274003EC518 /* EHFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818ECC248A1274003EC518 /* EHFormModel.m */; };
 		9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6702488C001000FA565 /* AppDelegate.m */; };
 		9AD7A67A2488C001000FA565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A6782488C001000FA565 /* Main.storyboard */; };
 		9AD7A67C2488C003000FA565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A67B2488C003000FA565 /* Assets.xcassets */; };
 		9AD7A67F2488C003000FA565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A67D2488C003000FA565 /* LaunchScreen.storyboard */; };
 		9AD7A6822488C003000FA565 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6812488C003000FA565 /* main.m */; };
 		9AD7A6C42488D056000FA565 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6C22488D056000FA565 /* MainViewController.m */; };
-		9AD7A6C52488D056000FA565 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A6C32488D056000FA565 /* MainViewController.xib */; };
 		9AD7A6C82488D0D8000FA565 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6C72488D0D8000FA565 /* BaseNavigationController.m */; };
 		9AD7A70E2488D3C7000FA565 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A70C2488D3C7000FA565 /* AppViewController.m */; };
-		9AD7A70F2488D3C7000FA565 /* AppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A70D2488D3C7000FA565 /* AppViewController.xib */; };
 		9AD7A7122488D3EC000FA565 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A7112488D3EC000FA565 /* BaseViewController.m */; };
 		9AD7A7162488D459000FA565 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A7142488D459000FA565 /* MineViewController.m */; };
-		9AD7A7172488D459000FA565 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A7152488D459000FA565 /* MineViewController.xib */; };
 		9AD7A71B2488D46F000FA565 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A7192488D46F000FA565 /* NewsViewController.m */; };
-		9AD7A71C2488D46F000FA565 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A71A2488D46F000FA565 /* NewsViewController.xib */; };
 		9AD7A7222488D523000FA565 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A7212488D523000FA565 /* BaseTabBarController.m */; };
 		9AD7A7272488D77A000FA565 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A7262488D77A000FA565 /* Images.xcassets */; };
 		9AD7A72B2488E261000FA565 /* BaseTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A72A2488E261000FA565 /* BaseTitleView.m */; };
@@ -56,6 +54,35 @@
 /* Begin PBXFileReference section */
 		6A4D366F5329253B8AF0328F /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		6EB90AEA2B53B12E58A9CF4C /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		9A497D0A248DF80600396DF7 /* EHFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableView.h; sourceTree = "<group>"; };
+		9A497D0B248DF80600396DF7 /* EHFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTableView.m; sourceTree = "<group>"; };
+		9A497D0D248DF80600396DF7 /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EHFormResources.bundle; sourceTree = "<group>"; };
+		9A497D10248DF80600396DF7 /* EHWhiteRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWhiteRowTableViewCell.m; sourceTree = "<group>"; };
+		9A497D11248DF80600396DF7 /* EHWhiteRowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWhiteRowTableViewCell.h; sourceTree = "<group>"; };
+		9A497D13248DF80600396DF7 /* EHPhoneNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPhoneNumberTableViewCell.h; sourceTree = "<group>"; };
+		9A497D14248DF80600396DF7 /* EHPhoneNumberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPhoneNumberTableViewCell.m; sourceTree = "<group>"; };
+		9A497D15248DF80600396DF7 /* EHPhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
+		9A497D17248DF80600396DF7 /* EHButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHButtonTableViewCell.m; sourceTree = "<group>"; };
+		9A497D18248DF80600396DF7 /* EHButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHButtonTableViewCell.h; sourceTree = "<group>"; };
+		9A497D1A248DF80600396DF7 /* EHFormTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTableViewCell.m; sourceTree = "<group>"; };
+		9A497D1B248DF80600396DF7 /* EHFormTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableViewCell.h; sourceTree = "<group>"; };
+		9A497D1D248DF80600396DF7 /* EHSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSwitchTableViewCell.m; sourceTree = "<group>"; };
+		9A497D1E248DF80600396DF7 /* EHSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHSwitchTableViewCell.xib; sourceTree = "<group>"; };
+		9A497D1F248DF80600396DF7 /* EHSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSwitchTableViewCell.h; sourceTree = "<group>"; };
+		9A497D21248DF80600396DF7 /* EHTapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTapTableViewCell.h; sourceTree = "<group>"; };
+		9A497D22248DF80600396DF7 /* EHTapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTapTableViewCell.xib; sourceTree = "<group>"; };
+		9A497D23248DF80600396DF7 /* EHTapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTapTableViewCell.m; sourceTree = "<group>"; };
+		9A497D25248DF80600396DF7 /* EHTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		9A497D26248DF80600396DF7 /* EHTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		9A497D27248DF80600396DF7 /* EHTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		9A497D29248DF80600396DF7 /* EHLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHLabelTableViewCell.h; sourceTree = "<group>"; };
+		9A497D2A248DF80600396DF7 /* EHLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHLabelTableViewCell.m; sourceTree = "<group>"; };
+		9A497D2B248DF80600396DF7 /* EHLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHLabelTableViewCell.xib; sourceTree = "<group>"; };
+		9A497D2D248DF80600396DF7 /* EHFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormModel.m; sourceTree = "<group>"; };
+		9A497D2E248DF80600396DF7 /* EHFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormModel.h; sourceTree = "<group>"; };
+		9A497D40248DFE4900396DF7 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		9A497D42248DFE5400396DF7 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		9A497D44248DFE5C00396DF7 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		9A818E452489E1FD003EC518 /* NSString+ZYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZYExtension.m"; sourceTree = "<group>"; };
 		9A818E462489E1FD003EC518 /* NSString+ZYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZYExtension.h"; sourceTree = "<group>"; };
 		9A818E4D2489E494003EC518 /* NSDate+ZYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZYExtension.m"; sourceTree = "<group>"; };
@@ -64,32 +91,6 @@
 		9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		9A818E5A2489ECD0003EC518 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
 		9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
-		9A818EA9248A1273003EC518 /* EHFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableView.h; sourceTree = "<group>"; };
-		9A818EAA248A1273003EC518 /* EHFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTableView.m; sourceTree = "<group>"; };
-		9A818EAC248A1274003EC518 /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EHFormResources.bundle; sourceTree = "<group>"; };
-		9A818EAF248A1274003EC518 /* EHWhiteRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWhiteRowTableViewCell.m; sourceTree = "<group>"; };
-		9A818EB0248A1274003EC518 /* EHWhiteRowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWhiteRowTableViewCell.h; sourceTree = "<group>"; };
-		9A818EB2248A1274003EC518 /* EHPhoneNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPhoneNumberTableViewCell.h; sourceTree = "<group>"; };
-		9A818EB3248A1274003EC518 /* EHPhoneNumberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPhoneNumberTableViewCell.m; sourceTree = "<group>"; };
-		9A818EB4248A1274003EC518 /* EHPhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
-		9A818EB6248A1274003EC518 /* EHButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHButtonTableViewCell.m; sourceTree = "<group>"; };
-		9A818EB7248A1274003EC518 /* EHButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHButtonTableViewCell.h; sourceTree = "<group>"; };
-		9A818EB9248A1274003EC518 /* EHFormTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTableViewCell.m; sourceTree = "<group>"; };
-		9A818EBA248A1274003EC518 /* EHFormTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableViewCell.h; sourceTree = "<group>"; };
-		9A818EBC248A1274003EC518 /* EHSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSwitchTableViewCell.m; sourceTree = "<group>"; };
-		9A818EBD248A1274003EC518 /* EHSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHSwitchTableViewCell.xib; sourceTree = "<group>"; };
-		9A818EBE248A1274003EC518 /* EHSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSwitchTableViewCell.h; sourceTree = "<group>"; };
-		9A818EC0248A1274003EC518 /* EHTapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTapTableViewCell.h; sourceTree = "<group>"; };
-		9A818EC1248A1274003EC518 /* EHTapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTapTableViewCell.xib; sourceTree = "<group>"; };
-		9A818EC2248A1274003EC518 /* EHTapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTapTableViewCell.m; sourceTree = "<group>"; };
-		9A818EC4248A1274003EC518 /* EHTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTextFieldTableViewCell.xib; sourceTree = "<group>"; };
-		9A818EC5248A1274003EC518 /* EHTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTextFieldTableViewCell.m; sourceTree = "<group>"; };
-		9A818EC6248A1274003EC518 /* EHTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTextFieldTableViewCell.h; sourceTree = "<group>"; };
-		9A818EC8248A1274003EC518 /* EHLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHLabelTableViewCell.h; sourceTree = "<group>"; };
-		9A818EC9248A1274003EC518 /* EHLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHLabelTableViewCell.m; sourceTree = "<group>"; };
-		9A818ECA248A1274003EC518 /* EHLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHLabelTableViewCell.xib; sourceTree = "<group>"; };
-		9A818ECC248A1274003EC518 /* EHFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormModel.m; sourceTree = "<group>"; };
-		9A818ECD248A1274003EC518 /* EHFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormModel.h; sourceTree = "<group>"; };
 		9AD7A66C2488C001000FA565 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD7A66F2488C001000FA565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AD7A6702488C001000FA565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,20 +101,16 @@
 		9AD7A6812488C003000FA565 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AD7A6C12488D056000FA565 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		9AD7A6C22488D056000FA565 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		9AD7A6C32488D056000FA565 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		9AD7A6C62488D0D8000FA565 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		9AD7A6C72488D0D8000FA565 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		9AD7A70B2488D3C7000FA565 /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
 		9AD7A70C2488D3C7000FA565 /* AppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
-		9AD7A70D2488D3C7000FA565 /* AppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppViewController.xib; sourceTree = "<group>"; };
 		9AD7A7102488D3EC000FA565 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		9AD7A7112488D3EC000FA565 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		9AD7A7132488D459000FA565 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		9AD7A7142488D459000FA565 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		9AD7A7152488D459000FA565 /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		9AD7A7182488D46F000FA565 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		9AD7A7192488D46F000FA565 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
-		9AD7A71A2488D46F000FA565 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		9AD7A7202488D523000FA565 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		9AD7A7212488D523000FA565 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		9AD7A7262488D77A000FA565 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 		9AD7A7582488F4A2000FA565 /* UIColor+ZYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZYExtension.m"; sourceTree = "<group>"; };
 		9AD7A75B2488F4A7000FA565 /* UIView+ZYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZYExtension.h"; sourceTree = "<group>"; };
 		9AD7A75C2488F4A7000FA565 /* UIView+ZYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZYExtension.m"; sourceTree = "<group>"; };
-		F5401D1DE10C35D3402A16E1 /* libPods-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,13 +133,152 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F2288AAD9B3E70922A1F19 /* libPods-demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A497D08248DF80600396DF7 /* EHFormKit */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D09248DF80600396DF7 /* TableView */,
+				9A497D0C248DF80600396DF7 /* Resources */,
+				9A497D0E248DF80600396DF7 /* Cell */,
+				9A497D2C248DF80600396DF7 /* Model */,
+			);
+			path = EHFormKit;
+			sourceTree = "<group>";
+		};
+		9A497D09248DF80600396DF7 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D0A248DF80600396DF7 /* EHFormTableView.h */,
+				9A497D0B248DF80600396DF7 /* EHFormTableView.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		9A497D0C248DF80600396DF7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D0D248DF80600396DF7 /* EHFormResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A497D0E248DF80600396DF7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D0F248DF80600396DF7 /* EHWhiteRowTableViewCell */,
+				9A497D12248DF80600396DF7 /* EHPhoneNumberTableViewCell */,
+				9A497D16248DF80600396DF7 /* EHButtonTableViewCell */,
+				9A497D19248DF80600396DF7 /* EHFormTableViewCell */,
+				9A497D1C248DF80600396DF7 /* EHSwitchTableViewCell */,
+				9A497D20248DF80600396DF7 /* EHTapTableViewCell */,
+				9A497D24248DF80600396DF7 /* EHTextFieldTableViewCell */,
+				9A497D28248DF80600396DF7 /* EHLabelTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9A497D0F248DF80600396DF7 /* EHWhiteRowTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D10248DF80600396DF7 /* EHWhiteRowTableViewCell.m */,
+				9A497D11248DF80600396DF7 /* EHWhiteRowTableViewCell.h */,
+			);
+			path = EHWhiteRowTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D12248DF80600396DF7 /* EHPhoneNumberTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D13248DF80600396DF7 /* EHPhoneNumberTableViewCell.h */,
+				9A497D14248DF80600396DF7 /* EHPhoneNumberTableViewCell.m */,
+				9A497D15248DF80600396DF7 /* EHPhoneNumberTableViewCell.xib */,
+			);
+			path = EHPhoneNumberTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D16248DF80600396DF7 /* EHButtonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D17248DF80600396DF7 /* EHButtonTableViewCell.m */,
+				9A497D18248DF80600396DF7 /* EHButtonTableViewCell.h */,
+			);
+			path = EHButtonTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D19248DF80600396DF7 /* EHFormTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D1A248DF80600396DF7 /* EHFormTableViewCell.m */,
+				9A497D1B248DF80600396DF7 /* EHFormTableViewCell.h */,
+			);
+			path = EHFormTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D1C248DF80600396DF7 /* EHSwitchTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D1D248DF80600396DF7 /* EHSwitchTableViewCell.m */,
+				9A497D1E248DF80600396DF7 /* EHSwitchTableViewCell.xib */,
+				9A497D1F248DF80600396DF7 /* EHSwitchTableViewCell.h */,
+			);
+			path = EHSwitchTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D20248DF80600396DF7 /* EHTapTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D21248DF80600396DF7 /* EHTapTableViewCell.h */,
+				9A497D22248DF80600396DF7 /* EHTapTableViewCell.xib */,
+				9A497D23248DF80600396DF7 /* EHTapTableViewCell.m */,
+			);
+			path = EHTapTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D24248DF80600396DF7 /* EHTextFieldTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D25248DF80600396DF7 /* EHTextFieldTableViewCell.xib */,
+				9A497D26248DF80600396DF7 /* EHTextFieldTableViewCell.m */,
+				9A497D27248DF80600396DF7 /* EHTextFieldTableViewCell.h */,
+			);
+			path = EHTextFieldTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D28248DF80600396DF7 /* EHLabelTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D29248DF80600396DF7 /* EHLabelTableViewCell.h */,
+				9A497D2A248DF80600396DF7 /* EHLabelTableViewCell.m */,
+				9A497D2B248DF80600396DF7 /* EHLabelTableViewCell.xib */,
+			);
+			path = EHLabelTableViewCell;
+			sourceTree = "<group>";
+		};
+		9A497D2C248DF80600396DF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A497D2D248DF80600396DF7 /* EHFormModel.m */,
+				9A497D2E248DF80600396DF7 /* EHFormModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A497D3F248DFE2A00396DF7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9AD7A6782488C001000FA565 /* Main.storyboard */,
+				9A497D40248DFE4900396DF7 /* App.storyboard */,
+				9A497D42248DFE5400396DF7 /* News.storyboard */,
+				9A497D44248DFE5C00396DF7 /* Mine.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		9A818E442489E1FD003EC518 /* NSString+ZYExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,138 +337,9 @@
 		9A818E68248A04F9003EC518 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9A818EA7248A1273003EC518 /* EHFormKit */,
+				9A497D08248DF80600396DF7 /* EHFormKit */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		9A818EA7248A1273003EC518 /* EHFormKit */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EA8248A1273003EC518 /* TableView */,
-				9A818EAB248A1274003EC518 /* Resources */,
-				9A818EAD248A1274003EC518 /* Cell */,
-				9A818ECB248A1274003EC518 /* Model */,
-			);
-			path = EHFormKit;
-			sourceTree = "<group>";
-		};
-		9A818EA8248A1273003EC518 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EA9248A1273003EC518 /* EHFormTableView.h */,
-				9A818EAA248A1273003EC518 /* EHFormTableView.m */,
-			);
-			path = TableView;
-			sourceTree = "<group>";
-		};
-		9A818EAB248A1274003EC518 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EAC248A1274003EC518 /* EHFormResources.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		9A818EAD248A1274003EC518 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EAE248A1274003EC518 /* EHWhiteRowTableViewCell */,
-				9A818EB1248A1274003EC518 /* EHPhoneNumberTableViewCell */,
-				9A818EB5248A1274003EC518 /* EHButtonTableViewCell */,
-				9A818EB8248A1274003EC518 /* EHFormTableViewCell */,
-				9A818EBB248A1274003EC518 /* EHSwitchTableViewCell */,
-				9A818EBF248A1274003EC518 /* EHTapTableViewCell */,
-				9A818EC3248A1274003EC518 /* EHTextFieldTableViewCell */,
-				9A818EC7248A1274003EC518 /* EHLabelTableViewCell */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		9A818EAE248A1274003EC518 /* EHWhiteRowTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EAF248A1274003EC518 /* EHWhiteRowTableViewCell.m */,
-				9A818EB0248A1274003EC518 /* EHWhiteRowTableViewCell.h */,
-			);
-			path = EHWhiteRowTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818EB1248A1274003EC518 /* EHPhoneNumberTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EB2248A1274003EC518 /* EHPhoneNumberTableViewCell.h */,
-				9A818EB3248A1274003EC518 /* EHPhoneNumberTableViewCell.m */,
-				9A818EB4248A1274003EC518 /* EHPhoneNumberTableViewCell.xib */,
-			);
-			path = EHPhoneNumberTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818EB5248A1274003EC518 /* EHButtonTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EB6248A1274003EC518 /* EHButtonTableViewCell.m */,
-				9A818EB7248A1274003EC518 /* EHButtonTableViewCell.h */,
-			);
-			path = EHButtonTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818EB8248A1274003EC518 /* EHFormTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EB9248A1274003EC518 /* EHFormTableViewCell.m */,
-				9A818EBA248A1274003EC518 /* EHFormTableViewCell.h */,
-			);
-			path = EHFormTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818EBB248A1274003EC518 /* EHSwitchTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EBC248A1274003EC518 /* EHSwitchTableViewCell.m */,
-				9A818EBD248A1274003EC518 /* EHSwitchTableViewCell.xib */,
-				9A818EBE248A1274003EC518 /* EHSwitchTableViewCell.h */,
-			);
-			path = EHSwitchTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818EBF248A1274003EC518 /* EHTapTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EC0248A1274003EC518 /* EHTapTableViewCell.h */,
-				9A818EC1248A1274003EC518 /* EHTapTableViewCell.xib */,
-				9A818EC2248A1274003EC518 /* EHTapTableViewCell.m */,
-			);
-			path = EHTapTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818EC3248A1274003EC518 /* EHTextFieldTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EC4248A1274003EC518 /* EHTextFieldTableViewCell.xib */,
-				9A818EC5248A1274003EC518 /* EHTextFieldTableViewCell.m */,
-				9A818EC6248A1274003EC518 /* EHTextFieldTableViewCell.h */,
-			);
-			path = EHTextFieldTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818EC7248A1274003EC518 /* EHLabelTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A818EC8248A1274003EC518 /* EHLabelTableViewCell.h */,
-				9A818EC9248A1274003EC518 /* EHLabelTableViewCell.m */,
-				9A818ECA248A1274003EC518 /* EHLabelTableViewCell.xib */,
-			);
-			path = EHLabelTableViewCell;
-			sourceTree = "<group>";
-		};
-		9A818ECB248A1274003EC518 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9A818ECC248A1274003EC518 /* EHFormModel.m */,
-				9A818ECD248A1274003EC518 /* EHFormModel.h */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9AD7A6632488C001000FA565 = {
@@ -366,6 +372,7 @@
 		9AD7A6B22488CB4E000FA565 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				9A497D3F248DFE2A00396DF7 /* Storyboard */,
 				9AD7A6B52488CD71000FA565 /* Base */,
 				9AD7A6B42488CB78000FA565 /* Tools */,
 				9AD7A6B32488CB70000FA565 /* Pages */,
@@ -435,7 +442,6 @@
 			children = (
 				9AD7A6C12488D056000FA565 /* MainViewController.h */,
 				9AD7A6C22488D056000FA565 /* MainViewController.m */,
-				9AD7A6C32488D056000FA565 /* MainViewController.xib */,
 				9AD7A7332488EB40000FA565 /* SecondViewController.h */,
 				9AD7A7342488EB40000FA565 /* SecondViewController.m */,
 			);
@@ -520,7 +526,6 @@
 			children = (
 				9AD7A7132488D459000FA565 /* MineViewController.h */,
 				9AD7A7142488D459000FA565 /* MineViewController.m */,
-				9AD7A7152488D459000FA565 /* MineViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -562,7 +567,6 @@
 			children = (
 				9AD7A7182488D46F000FA565 /* NewsViewController.h */,
 				9AD7A7192488D46F000FA565 /* NewsViewController.m */,
-				9AD7A71A2488D46F000FA565 /* NewsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -604,7 +608,6 @@
 			children = (
 				9AD7A70B2488D3C7000FA565 /* AppViewController.h */,
 				9AD7A70C2488D3C7000FA565 /* AppViewController.m */,
-				9AD7A70D2488D3C7000FA565 /* AppViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -628,7 +631,6 @@
 			children = (
 				9AD7A66F2488C001000FA565 /* AppDelegate.h */,
 				9AD7A6702488C001000FA565 /* AppDelegate.m */,
-				9AD7A6782488C001000FA565 /* Main.storyboard */,
 				9AD7A67B2488C003000FA565 /* Assets.xcassets */,
 				9AD7A67D2488C003000FA565 /* LaunchScreen.storyboard */,
 				9AD7A6802488C003000FA565 /* Info.plist */,
@@ -677,7 +679,6 @@
 		DC29BA72B075B0C945F3D03E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5401D1DE10C35D3402A16E1 /* libPods-demo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -741,21 +742,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD7A70F2488D3C7000FA565 /* AppViewController.xib in Resources */,
-				9A818ED7248A1274003EC518 /* EHTapTableViewCell.xib in Resources */,
+				9A497D38248DF80600396DF7 /* EHTapTableViewCell.xib in Resources */,
 				9AD7A7272488D77A000FA565 /* Images.xcassets in Resources */,
+				9A497D45248DFE5C00396DF7 /* Mine.storyboard in Resources */,
 				9AD7A67F2488C003000FA565 /* LaunchScreen.storyboard in Resources */,
-				9A818ED9248A1274003EC518 /* EHTextFieldTableViewCell.xib in Resources */,
-				9A818ED2248A1274003EC518 /* EHPhoneNumberTableViewCell.xib in Resources */,
+				9A497D3A248DF80600396DF7 /* EHTextFieldTableViewCell.xib in Resources */,
+				9A497D33248DF80600396DF7 /* EHPhoneNumberTableViewCell.xib in Resources */,
+				9A497D41248DFE4900396DF7 /* App.storyboard in Resources */,
 				9AD7A67C2488C003000FA565 /* Assets.xcassets in Resources */,
-				9A818ECF248A1274003EC518 /* EHFormResources.bundle in Resources */,
+				9A497D43248DFE5400396DF7 /* News.storyboard in Resources */,
+				9A497D30248DF80600396DF7 /* EHFormResources.bundle in Resources */,
 				9AD7A67A2488C001000FA565 /* Main.storyboard in Resources */,
-				9AD7A6C52488D056000FA565 /* MainViewController.xib in Resources */,
-				9A818ED6248A1274003EC518 /* EHSwitchTableViewCell.xib in Resources */,
+				9A497D37248DF80600396DF7 /* EHSwitchTableViewCell.xib in Resources */,
 				9AD7A72D2488E26A000FA565 /* BaseTitleView.xib in Resources */,
-				9AD7A7172488D459000FA565 /* MineViewController.xib in Resources */,
-				9AD7A71C2488D46F000FA565 /* NewsViewController.xib in Resources */,
-				9A818EDC248A1274003EC518 /* EHLabelTableViewCell.xib in Resources */,
+				9A497D3D248DF80600396DF7 /* EHLabelTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,32 +809,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD7A75D2488F4A7000FA565 /* UIView+ZYExtension.m in Sources */,
-				9A818ED0248A1274003EC518 /* EHWhiteRowTableViewCell.m in Sources */,
-				9A818EDA248A1274003EC518 /* EHTextFieldTableViewCell.m in Sources */,
+				9A497D31248DF80600396DF7 /* EHWhiteRowTableViewCell.m in Sources */,
+				9A497D3B248DF80600396DF7 /* EHTextFieldTableViewCell.m in Sources */,
 				9AD7A7122488D3EC000FA565 /* BaseViewController.m in Sources */,
 				9AD7A7352488EB40000FA565 /* SecondViewController.m in Sources */,
-				9A818ED5248A1274003EC518 /* EHSwitchTableViewCell.m in Sources */,
-				9A818EDD248A1274003EC518 /* EHFormModel.m in Sources */,
+				9A497D36248DF80600396DF7 /* EHSwitchTableViewCell.m in Sources */,
+				9A497D3E248DF80600396DF7 /* EHFormModel.m in Sources */,
 				9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */,
 				9A818E472489E1FD003EC518 /* NSString+ZYExtension.m in Sources */,
 				9AD7A7592488F4A2000FA565 /* UIColor+ZYExtension.m in Sources */,
 				9AD7A7162488D459000FA565 /* MineViewController.m in Sources */,
-				9A818ED3248A1274003EC518 /* EHButtonTableViewCell.m in Sources */,
+				9A497D34248DF80600396DF7 /* EHButtonTableViewCell.m in Sources */,
 				9AD7A6822488C003000FA565 /* main.m in Sources */,
 				9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */,
-				9A818EDB248A1274003EC518 /* EHLabelTableViewCell.m in Sources */,
-				9A818ED4248A1274003EC518 /* EHFormTableViewCell.m in Sources */,
+				9A497D3C248DF80600396DF7 /* EHLabelTableViewCell.m in Sources */,
+				9A497D35248DF80600396DF7 /* EHFormTableViewCell.m in Sources */,
 				9AD7A7322488E98D000FA565 /* BaseTitleLabel.m in Sources */,
 				9AD7A72B2488E261000FA565 /* BaseTitleView.m in Sources */,
-				9A818ECE248A1274003EC518 /* EHFormTableView.m in Sources */,
+				9A497D2F248DF80600396DF7 /* EHFormTableView.m in Sources */,
 				9AD7A70E2488D3C7000FA565 /* AppViewController.m in Sources */,
 				9AD7A71B2488D46F000FA565 /* NewsViewController.m in Sources */,
 				9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */,
-				9A818ED8248A1274003EC518 /* EHTapTableViewCell.m in Sources */,
+				9A497D39248DF80600396DF7 /* EHTapTableViewCell.m in Sources */,
 				9AD7A7222488D523000FA565 /* BaseTabBarController.m in Sources */,
 				9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */,
 				9AD7A6C42488D056000FA565 /* MainViewController.m in Sources */,
-				9A818ED1248A1274003EC518 /* EHPhoneNumberTableViewCell.m in Sources */,
+				9A497D32248DF80600396DF7 /* EHPhoneNumberTableViewCell.m in Sources */,
 				9AD7A6C82488D0D8000FA565 /* BaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -979,7 +979,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "demo/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "demo/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -998,7 +998,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "demo/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "demo/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

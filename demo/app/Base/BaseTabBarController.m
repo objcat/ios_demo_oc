@@ -55,28 +55,32 @@
      */
     
     {
-        BaseViewController *vc = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *vc = [sb instantiateInitialViewController];
         BaseNavigationController *navi = [[BaseNavigationController alloc] initWithRootViewController:vc];
         vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"tabbar_main"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tabbar_main_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         [viewControllers addObject:navi];
     }
     
     {
-        BaseViewController *vc = [[AppViewController alloc] initWithNibName:@"AppViewController" bundle:nil];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"App" bundle:nil];
+        UIViewController *vc = [sb instantiateInitialViewController];
         BaseNavigationController *navi = [[BaseNavigationController alloc] initWithRootViewController:vc];
         vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"应用" image:[[UIImage imageNamed:@"tabbar_apps"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tabbar_apps_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         [viewControllers addObject:navi];
     }
     
     {
-        BaseViewController *vc = [[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"News" bundle:nil];
+        UIViewController *vc = [sb instantiateInitialViewController];
         BaseNavigationController *navi = [[BaseNavigationController alloc] initWithRootViewController:vc];
         vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"新闻" image:[[UIImage imageNamed:@"tabbar_news"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tabbar_news_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         [viewControllers addObject:navi];
     }
     
     {
-        BaseViewController *vc = [[MineViewController alloc] initWithNibName:@"MineViewController" bundle:nil];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Mine" bundle:nil];
+        UIViewController *vc = [sb instantiateInitialViewController];
         BaseNavigationController *navi = [[BaseNavigationController alloc] initWithRootViewController:vc];
         vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[[UIImage imageNamed:@"tabbar_mine"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tabbar_mine_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         [viewControllers addObject:navi];
