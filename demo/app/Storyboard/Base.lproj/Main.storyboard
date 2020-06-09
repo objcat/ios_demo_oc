@@ -27,14 +27,77 @@
                     <view key="view" contentMode="scaleToFill" id="grG-Gf-ZZn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ohc-fG-BiE"/>
                     </view>
                     <navigationItem key="navigationItem" id="95a-Qv-ghY"/>
+                    <connections>
+                        <segue destination="Vys-FJ-IL7" kind="push" identifier="ThirdViewController" id="uXz-2Q-SCH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="545-XR-BTz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="64"/>
+            <point key="canvasLocation" x="401" y="58"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="Vsv-jQ-1uD">
+            <objects>
+                <viewController id="Vys-FJ-IL7" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eXJ-qb-G41">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zv2-y9-QHm">
+                                <rect key="frame" x="87" y="10" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3yn-zg-s6U"/>
+                                    <constraint firstAttribute="width" constant="240" id="wae-EV-KYi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-qe-KUy">
+                                <rect key="frame" x="87" y="670" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="g8e-Lz-dbh"/>
+                                    <constraint firstAttribute="height" constant="128" id="j0J-qE-egh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tgm-7I-sfO">
+                                <rect key="frame" x="10" y="357" width="100" height="128"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="pKN-PM-1VV"/>
+                                    <constraint firstAttribute="height" constant="128" id="zVo-72-SpV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-ux-8yW">
+                                <rect key="frame" x="304" y="357" width="100" height="128"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KmC-Z3-5KW"/>
+                                    <constraint firstAttribute="height" constant="128" id="Om7-i7-C5E"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ROe-ux-8yW" firstAttribute="centerY" secondItem="eXJ-qb-G41" secondAttribute="centerY" id="2y1-Xt-D43"/>
+                            <constraint firstItem="zv2-y9-QHm" firstAttribute="centerX" secondItem="eXJ-qb-G41" secondAttribute="centerX" id="Hsy-zA-dsm"/>
+                            <constraint firstItem="Tgm-7I-sfO" firstAttribute="leading" secondItem="DXx-4y-kke" secondAttribute="leading" constant="10" id="J2g-Iw-bwQ"/>
+                            <constraint firstItem="Tgm-7I-sfO" firstAttribute="centerY" secondItem="eXJ-qb-G41" secondAttribute="centerY" id="UPc-Ih-wyJ"/>
+                            <constraint firstItem="zv2-y9-QHm" firstAttribute="top" secondItem="DXx-4y-kke" secondAttribute="top" constant="10" id="aGp-8O-UrK"/>
+                            <constraint firstItem="ehL-qe-KUy" firstAttribute="centerX" secondItem="eXJ-qb-G41" secondAttribute="centerX" id="gVg-gX-T8I"/>
+                            <constraint firstItem="DXx-4y-kke" firstAttribute="trailing" secondItem="ROe-ux-8yW" secondAttribute="trailing" constant="10" id="h0Q-QP-FEn"/>
+                            <constraint firstItem="DXx-4y-kke" firstAttribute="bottom" secondItem="ehL-qe-KUy" secondAttribute="bottom" constant="10" id="zjD-z7-5nb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DXx-4y-kke"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zWZ-9S-UJV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XjR-Mx-Edh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="64"/>
         </scene>
     </scenes>
 </document>

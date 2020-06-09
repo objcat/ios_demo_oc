@@ -30,6 +30,7 @@
 		9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E4D2489E494003EC518 /* NSDate+ZYExtension.m */; };
 		9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */; };
 		9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */; };
+		9AC17151248F69D000F3C594 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC17150248F69D000F3C594 /* ThirdViewController.m */; };
 		9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6702488C001000FA565 /* AppDelegate.m */; };
 		9AD7A67A2488C001000FA565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A6782488C001000FA565 /* Main.storyboard */; };
 		9AD7A67C2488C003000FA565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A67B2488C003000FA565 /* Assets.xcassets */; };
@@ -91,6 +92,8 @@
 		9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		9A818E5A2489ECD0003EC518 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
 		9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
+		9AC1714F248F69D000F3C594 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		9AC17150248F69D000F3C594 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		9AD7A66C2488C001000FA565 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD7A66F2488C001000FA565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AD7A6702488C001000FA565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -444,6 +447,8 @@
 				9AD7A6C22488D056000FA565 /* MainViewController.m */,
 				9AD7A7332488EB40000FA565 /* SecondViewController.h */,
 				9AD7A7342488EB40000FA565 /* SecondViewController.m */,
+				9AC1714F248F69D000F3C594 /* ThirdViewController.h */,
+				9AC17150248F69D000F3C594 /* ThirdViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -814,6 +819,7 @@
 				9AD7A7122488D3EC000FA565 /* BaseViewController.m in Sources */,
 				9AD7A7352488EB40000FA565 /* SecondViewController.m in Sources */,
 				9A497D36248DF80600396DF7 /* EHSwitchTableViewCell.m in Sources */,
+				9AC17151248F69D000F3C594 /* ThirdViewController.m in Sources */,
 				9A497D3E248DF80600396DF7 /* EHFormModel.m in Sources */,
 				9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */,
 				9A818E472489E1FD003EC518 /* NSString+ZYExtension.m in Sources */,

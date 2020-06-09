@@ -29,14 +29,20 @@
     
     __weak typeof(self) weakSelf = self;
     
-    [tableView addNormalRowWithName:@"UILabel" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf.view makeToast:model.name duration:2 position:CSToastPositionCenter];
+    [tableView addNormalRowWithName:@"UIView" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf performSegueWithIdentifier:@"ThirdViewController" sender:model];
     }];
     
     [tableView addNormalRowWithName:@"UITextField" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         [weakSelf.view makeToast:model.name duration:2 position:CSToastPositionCenter];
     }];
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EHFormModel *model = sender;
+    BaseViewController *vc = segue.destinationViewController;
+    vc.baseTitleView.titleLabel.text = model.name;
 }
 
 @end
