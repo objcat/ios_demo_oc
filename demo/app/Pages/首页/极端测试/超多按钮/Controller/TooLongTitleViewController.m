@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.baseTitleView.titleLabel.text = @"我的家在东北松花江上，那里有森林煤矿，还有那满山遍野的大豆高粱";
+    self.baseTitleView.titleLabel.text = @"我的家在东北松花江上我的狗在东北洗衣机上";
 }
 
 /*
