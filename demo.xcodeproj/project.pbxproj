@@ -52,7 +52,6 @@
 		9ADA4A2A2491BE3300D3F2E8 /* ApiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A292491BE3300D3F2E8 /* ApiMap.m */; };
 		9ADA4A322491FE8800D3F2E8 /* UIViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A312491FE8800D3F2E8 /* UIViewDemoViewController.m */; };
 		9ADA4A36249201CC00D3F2E8 /* UITextFieldDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A35249201CC00D3F2E8 /* UITextFieldDemoViewController.m */; };
-		9ADA4A392492112800D3F2E8 /* BaseTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A382492112800D3F2E8 /* BaseTitleLabel.m */; };
 		9ADA4A3C2492145200D3F2E8 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A3B2492145200D3F2E8 /* FourthViewController.m */; };
 		9ADA4A44249215CA00D3F2E8 /* TooLongTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A43249215CA00D3F2E8 /* TooLongTitleViewController.m */; };
 		9ADA4A472492163000D3F2E8 /* TooMuchBarButtonItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A462492163000D3F2E8 /* TooMuchBarButtonItemViewController.m */; };
@@ -139,8 +138,6 @@
 		9ADA4A312491FE8800D3F2E8 /* UIViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewDemoViewController.m; sourceTree = "<group>"; };
 		9ADA4A34249201CC00D3F2E8 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		9ADA4A35249201CC00D3F2E8 /* UITextFieldDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDemoViewController.m; sourceTree = "<group>"; };
-		9ADA4A372492112800D3F2E8 /* BaseTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTitleLabel.h; sourceTree = "<group>"; };
-		9ADA4A382492112800D3F2E8 /* BaseTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTitleLabel.m; sourceTree = "<group>"; };
 		9ADA4A3A2492145100D3F2E8 /* FourthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		9ADA4A3B2492145200D3F2E8 /* FourthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		9ADA4A42249215CA00D3F2E8 /* TooLongTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TooLongTitleViewController.h; sourceTree = "<group>"; };
@@ -434,8 +431,6 @@
 				9AD7A7292488E261000FA565 /* BaseTitleView.h */,
 				9AD7A72A2488E261000FA565 /* BaseTitleView.m */,
 				9AD7A72C2488E26A000FA565 /* BaseTitleView.xib */,
-				9ADA4A372492112800D3F2E8 /* BaseTitleLabel.h */,
-				9ADA4A382492112800D3F2E8 /* BaseTitleLabel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -445,7 +440,7 @@
 			children = (
 				9ADA4A3D2492146B00D3F2E8 /* 极端测试 */,
 				9ADA4A2D2491FDD300D3F2E8 /* ZYKit */,
-				9ADA4A2C2491FDCB00D3F2E8 /* 原生组件 */,
+				9ADA4A2C2491FDCB00D3F2E8 /* 原生控件 */,
 				9AD7A6BC2488CFF3000FA565 /* 首页页面 */,
 			);
 			path = "首页";
@@ -705,13 +700,13 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		9ADA4A2C2491FDCB00D3F2E8 /* 原生组件 */ = {
+		9ADA4A2C2491FDCB00D3F2E8 /* 原生控件 */ = {
 			isa = PBXGroup;
 			children = (
 				9ADA4A332492019E00D3F2E8 /* UITextField */,
 				9ADA4A2E2491FDF400D3F2E8 /* UIView */,
 			);
-			path = "原生组件";
+			path = "原生控件";
 			sourceTree = "<group>";
 		};
 		9ADA4A2D2491FDD300D3F2E8 /* ZYKit */ = {
@@ -939,7 +934,6 @@
 				9ADA4A36249201CC00D3F2E8 /* UITextFieldDemoViewController.m in Sources */,
 				9A497D36248DF80600396DF7 /* EHSwitchTableViewCell.m in Sources */,
 				9AC17151248F69D000F3C594 /* ThirdViewController.m in Sources */,
-				9ADA4A392492112800D3F2E8 /* BaseTitleLabel.m in Sources */,
 				9A497D3E248DF80600396DF7 /* EHFormModel.m in Sources */,
 				9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */,
 				9A818E472489E1FD003EC518 /* NSString+ZYExtension.m in Sources */,

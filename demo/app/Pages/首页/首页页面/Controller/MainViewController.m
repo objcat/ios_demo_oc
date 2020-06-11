@@ -50,9 +50,6 @@
     [tableView addNormalRowWithName:@"极端测试" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         [weakSelf performSegueWithIdentifier:@"FourthViewController" sender:model];
     }];
-    
-    
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

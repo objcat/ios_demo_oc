@@ -15,10 +15,36 @@
 
 @implementation BaseViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 设置返回按钮文字
+    [self configBackButton];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 设置默认背景颜色 防止渲染延迟反应
-    self.view.backgroundColor = [UIColor whiteColor];
+    // 各项设置
+    [self setting];
+    // 打印沙盒路径
+    [self logSandbox];
+}
+
+- (void)setting {
+    
+    // 设置返回按钮的标题, 设置为空就是原标题
+    self.backButtonTitle = nil;
+    
+    // 设置背景颜色
+    if (self.view.backgroundColor == nil) {
+        /**
+         * 判断是否初始化了颜色 如果没有赋值成白色
+         * 加判断的目的是为了不影响storyboard中设置的初始背景颜色
+         */
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
+}
+
+- (void)logSandbox {
     // 打印沙盒路径
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -35,17 +61,15 @@
         _baseTitleView = [[NSBundle mainBundle] loadNibNamed:@"BaseTitleView" owner:nil options:nil][0];
         _baseTitleView.backgroundColor = [UIColor yellowColor];
         self.navigationItem.titleView = _baseTitleView;
-        
-        __weak typeof(self) weakSelf = self;
-        [_baseTitleView setTextDidSetBlock:^(NSString * _Nonnull text) {
-            /**
-             * 这里可以单独控制返回按钮的标题, 做到了标题和返回按钮的标题分离的效果
-             * 比如清空返回按钮的标题就是设置为 @""
-             */
-            weakSelf.navigationItem.title = text;
-        }];
     }
     return _baseTitleView;
+}
+
+- (void)configBackButton {
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:self.backButtonTitle ? self.backButtonTitle : self.baseTitleView.titleLabel.text style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backItem;
+    self.title = nil;
+    self.navigationItem.title = nil;
 }
 
 /**

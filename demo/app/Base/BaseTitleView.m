@@ -9,7 +9,7 @@
 
 #import "BaseTitleView.h"
 
-@interface BaseTitleView () <BaseTitleLabelDelegate>
+@interface BaseTitleView ()
 
 @end
 
@@ -17,11 +17,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.titleLabel.delegate = self;
-}
-
-- (void)textDidSet:(NSString *)text {
-    self.textDidSetBlock ? self.textDidSetBlock(text) : nil;
 }
 
 - (CGSize)intrinsicContentSize {

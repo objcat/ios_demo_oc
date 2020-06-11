@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     
     
-    self.baseTitleView.titleLabel.text = @"挡不着的!!!";
+    self.baseTitleView.titleLabel.text = @"挡不着的!!! 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
     
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"点击" style:UIBarButtonItemStyleDone target:self action:nil];
     
