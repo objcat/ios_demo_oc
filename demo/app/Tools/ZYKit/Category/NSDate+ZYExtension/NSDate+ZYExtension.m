@@ -224,10 +224,9 @@
     return [calendar dateFromComponents:compontents];
 }
 
+- (NSInteger)compareDate:(NSString*)date1 withDate:(NSString*)date2{
 
-- (int)compareDate:(NSString*)date1 withDate:(NSString*)date2{
-
-    int ci;
+    NSInteger ci;
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     [df setDateFormat:@"yyyy-MM-dd"];
     NSDate*dt1 = [df dateFromString:date1];

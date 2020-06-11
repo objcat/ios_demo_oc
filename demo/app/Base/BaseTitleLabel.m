@@ -13,19 +13,12 @@
 
 - (void)setText:(NSString *)text {
     
-    NSString *str = text;
-    
-    // 设置文字显示个数
-    if (text.length > self.maxTextNum) {
-        str = [[text substringToIndex:self.maxTextNum] stringByAppendingFormat:@"..."];
-    }
-    
     // 文字改变执行代理
     if (self.delegate && [self.delegate respondsToSelector:@selector(textDidSet:)]) {
         [self.delegate textDidSet:text];
     }
     
-    [super setText:str];
+    [super setText:text];
 }
 
 @end

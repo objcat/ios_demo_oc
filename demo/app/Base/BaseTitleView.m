@@ -24,6 +24,10 @@
     self.textDidSetBlock ? self.textDidSetBlock(text) : nil;
 }
 
+- (CGSize)intrinsicContentSize {
+    return UILayoutFittingCompressedSize;
+}
+
 
 
 

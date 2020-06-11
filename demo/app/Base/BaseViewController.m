@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 设置默认背景颜色 防止渲染延迟反应
+    self.view.backgroundColor = [UIColor whiteColor];
     // 打印沙盒路径
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -31,11 +33,9 @@
     if (!_baseTitleView) {
         // 初始自定义titleView
         _baseTitleView = [[NSBundle mainBundle] loadNibNamed:@"BaseTitleView" owner:nil options:nil][0];
-        _baseTitleView.frame = CGRectMake(0, 0, 0, 44);
         _baseTitleView.backgroundColor = [UIColor yellowColor];
-        // 设置标题最多显示字数, 超出显示 ...
-        _baseTitleView.titleLabel.maxTextNum = 10;
         self.navigationItem.titleView = _baseTitleView;
+        
         __weak typeof(self) weakSelf = self;
         [_baseTitleView setTextDidSetBlock:^(NSString * _Nonnull text) {
             /**

@@ -32,6 +32,7 @@
                 <constraint firstItem="TXZ-ur-lZY" firstAttribute="centerY" secondItem="nz7-C0-6Ye" secondAttribute="centerY" id="NTH-IA-sch"/>
                 <constraint firstItem="gCM-de-Go9" firstAttribute="leading" secondItem="TXZ-ur-lZY" secondAttribute="trailing" constant="2" id="QLg-76-O9D"/>
                 <constraint firstItem="TXZ-ur-lZY" firstAttribute="centerY" secondItem="nz7-C0-6Ye" secondAttribute="centerY" id="QTG-sS-5cc"/>
+                <constraint firstItem="TXZ-ur-lZY" firstAttribute="width" relation="lessThanOrEqual" secondItem="nz7-C0-6Ye" secondAttribute="width" multiplier="0.8" id="fAK-Yy-6Jo"/>
                 <constraint firstItem="gCM-de-Go9" firstAttribute="centerY" secondItem="nz7-C0-6Ye" secondAttribute="centerY" id="h6r-0T-ARg"/>
                 <constraint firstItem="TXZ-ur-lZY" firstAttribute="centerX" secondItem="nz7-C0-6Ye" secondAttribute="centerX" id="oM5-dm-kiD"/>
             </constraints>

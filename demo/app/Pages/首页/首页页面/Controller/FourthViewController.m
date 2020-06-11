@@ -1,0 +1,45 @@
+//
+//  FourthViewController.m
+//  demo
+//
+//  Created by 张祎 on 2020/6/11
+//  Copyright © 2020 objcat. All rights reserved.
+//
+    
+
+#import "FourthViewController.h"
+#import "EHFormTableView.h"
+#import "TooLongTitleViewController.h"
+#import "TooMuchBarButtonItemViewController.h"
+
+@interface FourthViewController ()
+
+@end
+
+@implementation FourthViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self createTableView];
+}
+
+- (void)createTableView {
+    
+    EHFormTableView *tableView = [EHFormTableView tableView];
+    tableView.frame = self.view.bounds;
+    [self.view addSubview:tableView];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [tableView addNormalRowWithName:@"超长标题" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf.navigationController pushViewController:[[TooLongTitleViewController alloc] init] animated:YES];
+    }];
+    
+    [tableView addNormalRowWithName:@"超多按钮" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf.navigationController pushViewController:[[TooMuchBarButtonItemViewController alloc] init] animated:YES];
+    }];
+    
+}
+
+@end

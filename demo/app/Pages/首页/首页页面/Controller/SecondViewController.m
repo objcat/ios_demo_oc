@@ -30,11 +30,11 @@
     __weak typeof(self) weakSelf = self;
     
     [tableView addNormalRowWithName:@"UIView" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf performSegueWithIdentifier:@"ThirdViewController" sender:model];
+        [weakSelf performSegueWithIdentifier:@"UIViewDemoViewController" sender:model];
     }];
     
     [tableView addNormalRowWithName:@"UITextField" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf.view makeToast:model.name duration:2 position:CSToastPositionCenter];
+        [weakSelf performSegueWithIdentifier:@"UITextFieldDemoViewController" sender:model];
     }];
     
 }

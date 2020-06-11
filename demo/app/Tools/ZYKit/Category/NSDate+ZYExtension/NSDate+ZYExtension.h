@@ -42,7 +42,7 @@
 /** 时间间隔 例: 1小时前 */
 @property (nonatomic, assign, readonly) NSString *timeRangeString;
 /** 当前月份有多少天 */
-@property (assign, nonatomic) NSInteger dayCount;
+@property (assign, nonatomic, readonly) NSInteger dayCount;
 
 /**
  * 获取指定格式的日期字符串
@@ -105,6 +105,6 @@
  * @param date1 时间1
  * @param date2 时间2
  */
-- (int)compareDate:(NSString*)date1 withDate:(NSString*)date2;
+- (NSInteger)compareDate:(NSString*)date1 withDate:(NSString*)date2;
 
 @end
