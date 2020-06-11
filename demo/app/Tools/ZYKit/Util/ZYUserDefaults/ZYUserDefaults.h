@@ -22,17 +22,7 @@
 @interface ZYUserDefaults : NSObject
 @property (strong, nonatomic) NSString *token;
 @property (assign, nonatomic) BOOL isLogin;
-@property (strong, nonatomic) NSDictionary *dic;
-@property (strong, nonatomic) NSArray *arr;
-@property (assign, nonatomic) NSInteger index;
-@property (strong, nonatomic) NSString *haha;
-@property (strong, nonatomic) NSNumber *number;
-@property (assign, nonatomic) int intA;
-@property (assign, nonatomic) float floatA;
-@property (assign, nonatomic) long longA;
-@property (assign, nonatomic) double doubleA;
-@property (strong, nonatomic) NSMutableArray *marr;
-@property (strong, nonatomic) NSMutableDictionary *mdic;
+@property (assign, nonatomic) BOOL isDev;
 
 /**
  *  单例初始化
