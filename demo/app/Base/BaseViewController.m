@@ -31,15 +31,17 @@
 
 - (void)setting {
     
-    // 设置返回按钮的标题, 设置为空就是原标题
+    /**
+     * 设置返回按钮的标题, 设置为nil就是原标题
+     * 在此处设置为全局修改 在单一控制器里设置在下一个页面生效
+     */
     self.backButtonTitle = nil;
     
-    // 设置背景颜色
+    /**
+     * 判断是否初始化了颜色 如果没有赋值成白色
+     * 加判断的目的是为了不影响storyboard中设置的初始背景颜色
+     */
     if (self.view.backgroundColor == nil) {
-        /**
-         * 判断是否初始化了颜色 如果没有赋值成白色
-         * 加判断的目的是为了不影响storyboard中设置的初始背景颜色
-         */
         self.view.backgroundColor = [UIColor whiteColor];
     }
 }

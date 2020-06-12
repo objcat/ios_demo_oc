@@ -26,8 +26,6 @@
     self.baseTitleView.titleLabel.textColor = COLORHEX(@"#409EFF");
     self.baseTitleView.titleLabel.font = [UIFont systemFontOfSize:25];
     [self createTableView];
-    
-    
 }
 
 - (void)createTableView {
