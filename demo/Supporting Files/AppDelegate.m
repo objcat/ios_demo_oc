@@ -28,6 +28,9 @@
     [self configIQKeyboard];
     // 让window显示在屏幕上
     [self.window makeKeyAndVisible];
+    
+
+    
     return YES;
 }
 

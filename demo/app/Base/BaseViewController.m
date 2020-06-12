@@ -10,32 +10,39 @@
 #import "BaseViewController.h"
 
 @interface BaseViewController ()
-
+/**
+ * 设置返回按钮图片 此属性非常顽固
+ * 所以通常情况下所有页面的返回按钮样式要保持一样 这里不支持动态修改
+ */
+@property (strong, nonatomic) UIImage *backButtonImage;
 @end
 
 @implementation BaseViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    // 设置返回按钮文字
+    // 设置返回按钮
     [self configBackButton];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 各项设置
-    [self setting];
+    // 默认设置
+    [self defaultSetting];
     // 打印沙盒路径
     [self logSandbox];
 }
 
-- (void)setting {
+- (void)defaultSetting {
     
-    /**
-     * 设置返回按钮的标题, 设置为nil就是原标题
-     * 在此处设置为全局修改 在单一控制器里设置在下一个页面生效
-     */
+    // 默认返回按钮标题 随原标题
     self.backButtonTitle = nil;
+    // 默认返回按钮颜色
+    self.backButtonTintColor = COLORHEX(@"#409EFF");
+    // 是否使用tintColor的颜色渲染返回按钮的图片
+    self.backButtonImageTemplete = YES;
+    // 默认返回按钮图标 注释掉就是系统默认图标
+    self.backButtonImage = [UIImage imageNamed:@"back"];
     
     /**
      * 判断是否初始化了颜色 如果没有赋值成白色
@@ -68,10 +75,22 @@
 }
 
 - (void)configBackButton {
+    // 设置返回按钮标题
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:self.backButtonTitle ? self.backButtonTitle : self.baseTitleView.titleLabel.text style:UIBarButtonItemStyleDone target:nil action:nil];
+    backItem.tintColor = self.backButtonTintColor;
     self.navigationItem.backBarButtonItem = backItem;
-    self.title = nil;
-    self.navigationItem.title = nil;
+    
+    // 设置返回按钮图片
+    UIImage *image = self.backButtonImage;
+    if (self.backButtonImageTemplete) {
+        // 渲染
+        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    } else {
+        // 不渲染
+        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
+    self.navigationController.navigationBar.backIndicatorImage = image;
+    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = image;
 }
 
 /**

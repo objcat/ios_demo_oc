@@ -1100,7 +1100,9 @@
 			baseConfigurationReference = 6EB90AEA2B53B12E58A9CF4C /* Pods-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3462LZ4NJQ;
 				GCC_PREFIX_HEADER = "demo/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "demo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1108,8 +1110,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mgyzy.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = mon_test_dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1119,7 +1122,9 @@
 			baseConfigurationReference = 6A4D366F5329253B8AF0328F /* Pods-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3462LZ4NJQ;
 				GCC_PREFIX_HEADER = "demo/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "demo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1127,8 +1132,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mgyzy.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = mon_test_dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

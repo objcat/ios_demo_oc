@@ -22,9 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    // 设置页面标题
     self.baseTitleView.titleLabel.text = @"Demo案例";
+    // 设置标题颜色
     self.baseTitleView.titleLabel.textColor = COLORHEX(@"#409EFF");
+    // 设置标题字号
     self.baseTitleView.titleLabel.font = [UIFont systemFontOfSize:25];
+    
+    // 创建tableView
     [self createTableView];
 }
 
