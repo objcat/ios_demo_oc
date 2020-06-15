@@ -8,8 +8,8 @@
 
 
 #import "MainViewController.h"
-#import "SecondViewController.h"
-#import "ThirdViewController.h"
+#import "TestControlsViewController.h"
+#import "TestZYKitViewController.h"
 #import "EHFormTableView.h"
 
 @interface MainViewController ()
@@ -46,6 +46,10 @@
         [weakSelf performSegueWithIdentifier:@"SecondViewController" sender:model];
     }];
     
+    [tableView addNormalRowWithName:@"功能" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf performSegueWithIdentifier:@"TestSkillViewController" sender:model];
+    }];
+    
     [tableView addNormalRowWithName:@"ZYKit" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         [weakSelf performSegueWithIdentifier:@"ThirdViewController" sender:model];
     }];
@@ -53,6 +57,8 @@
     [tableView addNormalRowWithName:@"极端测试" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         [weakSelf performSegueWithIdentifier:@"FourthViewController" sender:model];
     }];
+    
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

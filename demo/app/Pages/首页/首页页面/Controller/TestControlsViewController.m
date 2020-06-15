@@ -1,5 +1,5 @@
 //
-//  SecondViewController.m
+//  TestControlsViewController.m
 //  demo
 //
 //  Created by 张祎 on 2020/6/4
@@ -7,14 +7,14 @@
 //
 
 
-#import "SecondViewController.h"
+#import "TestControlsViewController.h"
 #import "EHFormTableView.h"
 
-@interface SecondViewController ()
+@interface TestControlsViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation TestControlsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

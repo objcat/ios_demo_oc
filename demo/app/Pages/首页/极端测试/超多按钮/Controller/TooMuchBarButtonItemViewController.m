@@ -22,13 +22,13 @@
     
     self.baseTitleView.titleLabel.text = @"挡不着的!!! 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"点击" style:UIBarButtonItemStyleDone target:self action:nil];
+    
     
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithTitle:@"听说挡不着" style:UIBarButtonItemStyleDone target:self action:nil];
     
     UIBarButtonItem *item3 = [[UIBarButtonItem alloc] initWithTitle:@"fuck!!!" style:UIBarButtonItemStyleDone target:self action:nil];
     
-    self.navigationItem.rightBarButtonItems = @[item1, item2, item3];
+    self.navigationItem.rightBarButtonItems = @[item2, item3];
 }
 
 /*

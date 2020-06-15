@@ -1,24 +1,23 @@
 //
-//  TooLongTitleViewController.m
+//  TestZYKitViewController.m
 //  demo
 //
-//  Created by 张祎 on 2020/6/11
+//  Created by 张祎 on 2020/6/9
 //  Copyright © 2020 objcat. All rights reserved.
 //
     
 
-#import "TooLongTitleViewController.h"
+#import "TestZYKitViewController.h"
 
-@interface TooLongTitleViewController ()
+@interface TestZYKitViewController ()
 
 @end
 
-@implementation TooLongTitleViewController
+@implementation TestZYKitViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.baseTitleView.titleLabel.text = @"我的家在东北松花江上我的狗在东北洗衣机上";
 }
 
 /*

@@ -10,7 +10,7 @@
 #import "EHFormModel.h"
 
 @protocol EHFormTableViewProtocol <NSObject>
-// 滚动代理方法 可以自己进行扩展
+/// 滚动代理方法 可以自己进行扩展
 - (void)eh_scrollViewDidScroll:(UIScrollView *)scrollView;
 @end
 

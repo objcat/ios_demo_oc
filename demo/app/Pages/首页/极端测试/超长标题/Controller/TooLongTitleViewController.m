@@ -1,23 +1,24 @@
 //
-//  ThirdViewController.m
+//  TooLongTitleViewController.m
 //  demo
 //
-//  Created by 张祎 on 2020/6/9
+//  Created by 张祎 on 2020/6/11
 //  Copyright © 2020 objcat. All rights reserved.
 //
     
 
-#import "ThirdViewController.h"
+#import "TooLongTitleViewController.h"
 
-@interface ThirdViewController ()
+@interface TooLongTitleViewController ()
 
 @end
 
-@implementation ThirdViewController
+@implementation TooLongTitleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.baseTitleView.titleLabel.text = @"超长标题超长标题超长标题超长标题超长标题超长标题";
 }
 
 /*

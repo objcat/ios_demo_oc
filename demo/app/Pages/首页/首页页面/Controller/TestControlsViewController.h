@@ -1,8 +1,8 @@
 //
-//  FourthViewController.h
+//  TestControlsViewController.h
 //  demo
 //
-//  Created by 张祎 on 2020/6/11
+//  Created by 张祎 on 2020/6/4
 //  Copyright © 2020 objcat. All rights reserved.
 //
     
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FourthViewController : BaseViewController
+@interface TestControlsViewController : BaseViewController
 
 @end
 

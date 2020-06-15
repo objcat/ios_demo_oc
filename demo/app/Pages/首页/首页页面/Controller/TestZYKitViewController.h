@@ -1,8 +1,8 @@
 //
-//  SecondViewController.h
+//  TestZYKitViewController.h
 //  demo
 //
-//  Created by 张祎 on 2020/6/4
+//  Created by 张祎 on 2020/6/9
 //  Copyright © 2020 objcat. All rights reserved.
 //
     
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SecondViewController : BaseViewController
+@interface TestZYKitViewController : BaseViewController
 
 @end
 
