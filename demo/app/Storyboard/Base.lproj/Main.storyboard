@@ -51,18 +51,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-p4-Y5R">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </scrollView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ic0-FQ-inE">
+                                <rect key="frame" x="159" y="618" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02K-7A-Miu">
+                                <rect key="frame" x="76" y="696" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="WR3-p4-Y5R" firstAttribute="top" secondItem="Za3-yC-x54" secondAttribute="top" id="5jf-nN-peZ"/>
-                            <constraint firstItem="WR3-p4-Y5R" firstAttribute="leading" secondItem="Za3-yC-x54" secondAttribute="leading" id="AS2-29-Ocn"/>
-                            <constraint firstItem="Za3-yC-x54" firstAttribute="bottom" secondItem="WR3-p4-Y5R" secondAttribute="bottom" id="c1t-CP-vBe"/>
-                            <constraint firstItem="Za3-yC-x54" firstAttribute="trailing" secondItem="WR3-p4-Y5R" secondAttribute="trailing" id="zvU-ip-xcU"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Za3-yC-x54"/>
                     </view>
                     <navigationItem key="navigationItem" id="lme-kI-1Yj"/>
