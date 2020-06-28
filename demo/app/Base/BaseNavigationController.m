@@ -5,20 +5,27 @@
 //  Created by 张祎 on 2020/6/4
 //  Copyright © 2020 objcat. All rights reserved.
 //
-    
+
 
 #import "BaseNavigationController.h"
 
-@interface BaseNavigationController () <UINavigationBarDelegate>
+@interface BaseNavigationController () <UINavigationBarDelegate, UIGestureRecognizerDelegate>
 
 @end
 
 @implementation BaseNavigationController
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    // 防止根视图控制器调用返回手势造成卡顿数秒的问题
+    return self.childViewControllers.count > 1;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置导航栏背景颜色, 这里使用99%透明度的图片作为背景, 既做到了不透明又不影响初始坐标系
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bar_image"] forBarMetrics:UIBarMetricsDefault];
+    // 返回手势代理
+    self.interactivePopGestureRecognizer.delegate = self;
 }
 
 /**
@@ -42,7 +49,7 @@
     if([self.viewControllers count] < [navigationBar.items count]) {
         return YES;
     }
-
+    
     // 设置返回默认值
     BOOL shouldPop = YES;
     
@@ -51,7 +58,7 @@
     if([vc respondsToSelector:@selector(navigationShouldPopOnBackButton)]) {
         shouldPop = [vc navigationShouldPopOnBackButton];
     }
-
+    
     // 如果没有重写方法执行 popViewControllerAnimated pop控制器
     if(shouldPop) {
         dispatch_async(dispatch_get_main_queue(), ^{

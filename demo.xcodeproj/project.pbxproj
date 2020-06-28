@@ -30,6 +30,7 @@
 		9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E4D2489E494003EC518 /* NSDate+ZYExtension.m */; };
 		9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */; };
 		9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */; };
+		9AB554A324A88ACE009B0127 /* StopPopGestureRecognizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB554A224A88ACE009B0127 /* StopPopGestureRecognizerViewController.m */; };
 		9ABEC9402497476000DF2C1A /* TestSkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC93F2497476000DF2C1A /* TestSkillViewController.m */; };
 		9ABEC9452497482C00DF2C1A /* BackButtonHookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC9442497482C00DF2C1A /* BackButtonHookViewController.m */; };
 		9AC17151248F69D000F3C594 /* TestZYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC17150248F69D000F3C594 /* TestZYKitViewController.m */; };
@@ -99,6 +100,8 @@
 		9A818E562489E83E003EC518 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		9A818E5A2489ECD0003EC518 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
 		9A818E5B2489ECD0003EC518 /* ZYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
+		9AB554A124A88ACE009B0127 /* StopPopGestureRecognizerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StopPopGestureRecognizerViewController.h; sourceTree = "<group>"; };
+		9AB554A224A88ACE009B0127 /* StopPopGestureRecognizerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopPopGestureRecognizerViewController.m; sourceTree = "<group>"; };
 		9ABEC93E2497476000DF2C1A /* TestSkillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSkillViewController.h; sourceTree = "<group>"; };
 		9ABEC93F2497476000DF2C1A /* TestSkillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSkillViewController.m; sourceTree = "<group>"; };
 		9ABEC9432497482C00DF2C1A /* BackButtonHookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackButtonHookViewController.h; sourceTree = "<group>"; };
@@ -366,9 +369,19 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		9AB554A024A88A96009B0127 /* 禁用某页面的返回手势 */ = {
+			isa = PBXGroup;
+			children = (
+				9AB554A124A88ACE009B0127 /* StopPopGestureRecognizerViewController.h */,
+				9AB554A224A88ACE009B0127 /* StopPopGestureRecognizerViewController.m */,
+			);
+			path = "禁用某页面的返回手势";
+			sourceTree = "<group>";
+		};
 		9ABEC941249747F700DF2C1A /* 功能 */ = {
 			isa = PBXGroup;
 			children = (
+				9AB554A024A88A96009B0127 /* 禁用某页面的返回手势 */,
 				9ABEC9422497480E00DF2C1A /* 返回按钮拦截 */,
 			);
 			path = "功能";
@@ -955,6 +968,7 @@
 				9AD7A75D2488F4A7000FA565 /* UIView+ZYExtension.m in Sources */,
 				9A497D31248DF80600396DF7 /* EHWhiteRowTableViewCell.m in Sources */,
 				9A497D3B248DF80600396DF7 /* EHTextFieldTableViewCell.m in Sources */,
+				9AB554A324A88ACE009B0127 /* StopPopGestureRecognizerViewController.m in Sources */,
 				9AD7A7122488D3EC000FA565 /* BaseViewController.m in Sources */,
 				9AD7A7352488EB40000FA565 /* TestControlsViewController.m in Sources */,
 				9ADA4A36249201CC00D3F2E8 /* UITextFieldDemoViewController.m in Sources */,

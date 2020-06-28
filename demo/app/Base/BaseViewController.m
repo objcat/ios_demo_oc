@@ -9,7 +9,7 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()
+@interface BaseViewController () <UIGestureRecognizerDelegate>
 /**
  * 设置返回按钮图片 此属性非常顽固
  * 所以通常情况下所有页面的返回按钮样式要保持一样 这里不支持动态修改
@@ -18,6 +18,25 @@
 @end
 
 @implementation BaseViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // 禁用某页面返回按钮功能
+    if (self.stopInteractivePopGestureRecognizer) {
+        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+            self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+        }
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.stopInteractivePopGestureRecognizer) {
+        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+            self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        }
+    }
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

@@ -37,5 +37,10 @@
  */
 @property (assign, nonatomic) BOOL backButtonImageTemplete;
 
+/**
+ *  禁用单个页面返回手势
+ */
+@property (assign, nonatomic) BOOL stopInteractivePopGestureRecognizer;
+
 @end
 

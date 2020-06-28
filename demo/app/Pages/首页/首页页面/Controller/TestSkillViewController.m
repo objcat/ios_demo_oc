@@ -10,6 +10,7 @@
 #import "TestSkillViewController.h"
 #import "EHFormTableView.h"
 #import "BackButtonHookViewController.h"
+#import "StopPopGestureRecognizerViewController.h"
 
 @interface TestSkillViewController ()
 
@@ -32,6 +33,10 @@
     
     [tableView addNormalRowWithName:@"返回按钮拦截" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         [weakSelf.navigationController pushViewController:[[BackButtonHookViewController alloc] init] animated:YES];
+    }];
+    
+    [tableView addNormalRowWithName:@"禁用某页面的返回手势" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf.navigationController pushViewController:[[StopPopGestureRecognizerViewController alloc] init] animated:YES];
     }];
     
 
