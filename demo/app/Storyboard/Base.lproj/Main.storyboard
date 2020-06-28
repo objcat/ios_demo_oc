@@ -51,20 +51,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ic0-FQ-inE">
-                                <rect key="frame" x="159" y="618" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ic0-FQ-inE">
+                                <rect key="frame" x="159" y="623.33333333333337" width="97" height="28.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="vwD-Rq-tPs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02K-7A-Miu">
-                                <rect key="frame" x="76" y="696" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02K-7A-Miu">
+                                <rect key="frame" x="76" y="701.33333333333337" width="97" height="28.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="T5v-9c-nPP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="02K-7A-Miu" firstAttribute="top" secondItem="Ic0-FQ-inE" secondAttribute="bottom" constant="49.333333333333371" id="6jd-7X-tXL"/>
+                            <constraint firstItem="Za3-yC-x54" firstAttribute="bottom" secondItem="02K-7A-Miu" secondAttribute="bottom" constant="78" id="F8K-nQ-9bd"/>
+                            <constraint firstItem="02K-7A-Miu" firstAttribute="leading" secondItem="Za3-yC-x54" secondAttribute="leading" constant="76" id="NIa-7D-MqG"/>
+                            <constraint firstItem="Ic0-FQ-inE" firstAttribute="leading" secondItem="Za3-yC-x54" secondAttribute="leading" constant="159" id="cm9-uP-isN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Za3-yC-x54"/>
                     </view>
                     <navigationItem key="navigationItem" id="lme-kI-1Yj"/>
