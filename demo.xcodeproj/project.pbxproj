@@ -34,6 +34,7 @@
 		9AB554A324A88ACE009B0127 /* StopPopGestureRecognizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB554A224A88ACE009B0127 /* StopPopGestureRecognizerViewController.m */; };
 		9ABEC9402497476000DF2C1A /* TestSkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC93F2497476000DF2C1A /* TestSkillViewController.m */; };
 		9ABEC9452497482C00DF2C1A /* BackButtonHookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC9442497482C00DF2C1A /* BackButtonHookViewController.m */; };
+		9AC0FD0224F7899C006FE6C6 /* ExitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FD0124F7899B006FE6C6 /* ExitViewController.m */; };
 		9AC17151248F69D000F3C594 /* TestZYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC17150248F69D000F3C594 /* TestZYKitViewController.m */; };
 		9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A6702488C001000FA565 /* AppDelegate.m */; };
 		9AD7A67A2488C001000FA565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A6782488C001000FA565 /* Main.storyboard */; };
@@ -108,6 +109,8 @@
 		9ABEC93F2497476000DF2C1A /* TestSkillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSkillViewController.m; sourceTree = "<group>"; };
 		9ABEC9432497482C00DF2C1A /* BackButtonHookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackButtonHookViewController.h; sourceTree = "<group>"; };
 		9ABEC9442497482C00DF2C1A /* BackButtonHookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackButtonHookViewController.m; sourceTree = "<group>"; };
+		9AC0FD0024F7899B006FE6C6 /* ExitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExitViewController.h; sourceTree = "<group>"; };
+		9AC0FD0124F7899B006FE6C6 /* ExitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExitViewController.m; sourceTree = "<group>"; };
 		9AC1714F248F69D000F3C594 /* TestZYKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestZYKitViewController.h; sourceTree = "<group>"; };
 		9AC17150248F69D000F3C594 /* TestZYKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestZYKitViewController.m; sourceTree = "<group>"; };
 		9AD7A66C2488C001000FA565 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -384,6 +387,7 @@
 		9ABEC941249747F700DF2C1A /* 功能 */ = {
 			isa = PBXGroup;
 			children = (
+				9AC0FCFF24F78987006FE6C6 /* 退出程序 */,
 				9AB554A024A88A96009B0127 /* 禁用某页面的返回手势 */,
 				9ABEC9422497480E00DF2C1A /* 返回按钮拦截 */,
 			);
@@ -397,6 +401,15 @@
 				9ABEC9442497482C00DF2C1A /* BackButtonHookViewController.m */,
 			);
 			path = "返回按钮拦截";
+			sourceTree = "<group>";
+		};
+		9AC0FCFF24F78987006FE6C6 /* 退出程序 */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0FD0024F7899B006FE6C6 /* ExitViewController.h */,
+				9AC0FD0124F7899B006FE6C6 /* ExitViewController.m */,
+			);
+			path = "退出程序";
 			sourceTree = "<group>";
 		};
 		9AD7A6632488C001000FA565 = {
@@ -489,7 +502,6 @@
 		9AD7A6BC2488CFF3000FA565 /* 首页页面 */ = {
 			isa = PBXGroup;
 			children = (
-				9AD7A6C02488D020000FA565 /* ViewModel */,
 				9AD7A6BF2488D01B000FA565 /* View */,
 				9AD7A6BE2488D014000FA565 /* Model */,
 				9AD7A6BD2488D00B000FA565 /* Controller */,
@@ -526,13 +538,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9AD7A6C02488D020000FA565 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9AD7A6C92488D1F2000FA565 /* ZYKit */ = {
@@ -572,19 +577,11 @@
 		9AD7A6EB2488D30E000FA565 /* 我的页面 */ = {
 			isa = PBXGroup;
 			children = (
-				9AD7A6EC2488D30E000FA565 /* ViewModel */,
 				9AD7A6ED2488D30E000FA565 /* Controller */,
 				9AD7A6F12488D30E000FA565 /* Model */,
 				9AD7A6F22488D30E000FA565 /* View */,
 			);
 			path = "我的页面";
-			sourceTree = "<group>";
-		};
-		9AD7A6EC2488D30E000FA565 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9AD7A6ED2488D30E000FA565 /* Controller */ = {
@@ -613,19 +610,11 @@
 		9AD7A6F72488D35D000FA565 /* 新闻页面 */ = {
 			isa = PBXGroup;
 			children = (
-				9AD7A6F82488D35D000FA565 /* ViewModel */,
 				9AD7A6F92488D35D000FA565 /* Controller */,
 				9AD7A6FD2488D35D000FA565 /* Model */,
 				9AD7A6FE2488D35D000FA565 /* View */,
 			);
 			path = "新闻页面";
-			sourceTree = "<group>";
-		};
-		9AD7A6F82488D35D000FA565 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9AD7A6F92488D35D000FA565 /* Controller */ = {
@@ -654,19 +643,11 @@
 		9AD7A7012488D366000FA565 /* 应用页面 */ = {
 			isa = PBXGroup;
 			children = (
-				9AD7A7022488D366000FA565 /* ViewModel */,
 				9AD7A7032488D366000FA565 /* Controller */,
 				9AD7A7072488D366000FA565 /* Model */,
 				9AD7A7082488D366000FA565 /* View */,
 			);
 			path = "应用页面";
-			sourceTree = "<group>";
-		};
-		9AD7A7022488D366000FA565 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9AD7A7032488D366000FA565 /* Controller */ = {
@@ -973,6 +954,7 @@
 				9A497D31248DF80600396DF7 /* EHWhiteRowTableViewCell.m in Sources */,
 				9A497D3B248DF80600396DF7 /* EHTextFieldTableViewCell.m in Sources */,
 				9AB554A324A88ACE009B0127 /* StopPopGestureRecognizerViewController.m in Sources */,
+				9AC0FD0224F7899C006FE6C6 /* ExitViewController.m in Sources */,
 				9AD7A7122488D3EC000FA565 /* BaseViewController.m in Sources */,
 				9AD7A7352488EB40000FA565 /* TestControlsViewController.m in Sources */,
 				9ADA4A36249201CC00D3F2E8 /* UITextFieldDemoViewController.m in Sources */,
