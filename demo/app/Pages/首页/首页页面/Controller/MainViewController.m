@@ -21,14 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
     // 设置页面标题
-    self.baseTitleView.titleLabel.text = @"Demo案例";
-    // 设置标题颜色
-    self.baseTitleView.titleLabel.textColor = COLORHEX(@"#409EFF");
-    // 设置标题字号
-    self.baseTitleView.titleLabel.font = [UIFont systemFontOfSize:25];
-    
+    self.navigationItem.title = @"Demo案例";
     // 创建tableView
     [self createTableView];
 }
@@ -57,8 +51,6 @@
     [tableView addNormalRowWithName:@"极端测试" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         [weakSelf performSegueWithIdentifier:@"FourthViewController" sender:model];
     }];
-    
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -67,7 +59,7 @@
     // 获取传递的model
     EHFormModel *model = sender;
     // 把model的name赋值到标题上
-    vc.baseTitleView.titleLabel.text = model.name;
+    vc.navigationItem.title = model.name;
 }
 
 @end

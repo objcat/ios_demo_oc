@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "BaseTitleView.h"
 
+#define ZY_CUSTOM_TITLEVIEW NO
+
 
 @interface BaseViewController : UIViewController
 

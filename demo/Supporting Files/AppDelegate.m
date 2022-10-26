@@ -5,7 +5,7 @@
 //  Created by 张祎 on 2020/6/4
 //  Copyright © 2020 objcat. All rights reserved.
 //
-    
+
 
 #import "AppDelegate.h"
 #import "BaseTabBarController.h"
@@ -22,19 +22,39 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 初始化window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 配置全局样式
+    [self configAppearance];
     // 设置主视图控制器
-    [self setupMain];
+    [self setupRootViewController];
     // 设置IQ
     [self configIQKeyboard];
     // 让window显示在屏幕上
     [self.window makeKeyAndVisible];
-    
-
-    
     return YES;
 }
 
-- (void)setupMain {
+- (void)configAppearance {
+    if (@available(iOS 13, *)) {
+        // 配置导航栏全局样式
+        UINavigationBarAppearance *naviAppearance = [[UINavigationBarAppearance alloc] init];
+        naviAppearance.backgroundColor = [UIColor whiteColor];
+        [UINavigationBar appearance].standardAppearance = naviAppearance;
+        [UINavigationBar appearance].scrollEdgeAppearance = naviAppearance;
+        // 配置tabBar全局样式
+        UITabBarAppearance *tabBarAppearance = [[UITabBarAppearance alloc] init];
+        tabBarAppearance.backgroundColor = [UIColor whiteColor];
+        [UITabBar appearance].standardAppearance = tabBarAppearance;
+        if (@available(iOS 15, *)) {
+            [UITabBar appearance].scrollEdgeAppearance = tabBarAppearance;
+        }
+        // 设置选中颜色
+        [UITabBar appearance].tintColor = RGBA(6, 181, 141, 1);
+        // 设置未选中颜色
+        [UITabBar appearance].unselectedItemTintColor = RGBA(73, 73, 73, 1);
+    }
+}
+
+- (void)setupRootViewController {
     // 自定义tabBarController
     self.window.rootViewController = [[BaseTabBarController alloc] init];
 }

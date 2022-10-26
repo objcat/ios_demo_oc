@@ -38,12 +38,6 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    // 设置返回按钮
-    [self configBackButton];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 默认设置
@@ -53,7 +47,6 @@
 }
 
 - (void)defaultSetting {
-    
     // 默认返回按钮标题 随原标题
     self.backButtonTitle = nil;
     // 默认返回按钮颜色
@@ -83,22 +76,30 @@
 /**
  * 使用baseTitleView取代系统原有的titleView使得自定义变的非常容易
  */
-- (BaseTitleView *)baseTitleView {
-    if (!_baseTitleView) {
-        // 初始自定义titleView
-        _baseTitleView = [[NSBundle mainBundle] loadNibNamed:@"BaseTitleView" owner:nil options:nil][0];
-        _baseTitleView.backgroundColor = [UIColor yellowColor];
-        self.navigationItem.titleView = _baseTitleView;
++ (BaseTitleView *)defaultBaseTitleView {
+    BaseTitleView *baseTitleView = [[NSBundle mainBundle] loadNibNamed:@"BaseTitleView" owner:nil options:nil][0];
+    return baseTitleView;
+}
+
+- (void)configTitleView {
+    if (self.baseTitleView) {
+        // 设置返回按钮标题
+        self.navigationItem.titleView = self.baseTitleView;
     }
-    return _baseTitleView;
 }
 
 - (void)configBackButton {
-    // 设置返回按钮标题
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:self.backButtonTitle ? self.backButtonTitle : self.baseTitleView.titleLabel.text style:UIBarButtonItemStyleDone target:nil action:nil];
+    NSString *defaultText = nil;
+    // 如果当前控制器是自定义titleView
+    if (self.baseTitleView) {
+        defaultText = self.baseTitleView.titleLabel.text;
+    } else {
+        // 如果当前控制器不是自定义titleView
+        defaultText = self.navigationItem.title;
+    }
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:self.backButtonTitle ? self.backButtonTitle : defaultText style:UIBarButtonItemStyleDone target:nil action:nil];
     backItem.tintColor = self.backButtonTintColor;
     self.navigationItem.backBarButtonItem = backItem;
-    
     // 设置返回按钮图片
     UIImage *image = self.backButtonImage;
     if (self.backButtonImageTemplete) {
@@ -110,6 +111,14 @@
     }
     self.navigationController.navigationBar.backIndicatorImage = image;
     self.navigationController.navigationBar.backIndicatorTransitionMaskImage = image;
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    // 设置自定义titleView
+    [self configTitleView];
+    // 设置返回按钮
+    [self configBackButton];
 }
 
 /**

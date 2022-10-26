@@ -24,25 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    /**
-     * 自定义tabBar
-     * 这里可以对tabBar无限制进行自定义
-     */
-    
-    // 设置样式
-    [self setupStyles];
     // 设置子控制器
     [self setupControllers];
-}
-
-- (void)setupStyles {
-    // 设置tabBar背景颜色, 这里使用99%透明度的图片作为背景, 既做到了不透明又不影响初始坐标系
-    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_color_image"]];
-    // 设置选中颜色
-    [UITabBar appearance].tintColor = RGBA(6, 181, 141, 1);
-    // 设置未选中颜色 注意此方法仅支持iOS10以上 需要兼容以下版本使用 setTitleTextAttributes
-    [UITabBar appearance].unselectedItemTintColor = RGBA(73, 73, 73, 1);
 }
 
 - (void)setupControllers {
