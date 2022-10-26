@@ -15,6 +15,8 @@
 		2D1DE29229091F3300F5EBFE /* EHTapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE28629091F3200F5EBFE /* EHTapTableViewCell.m */; };
 		2D1DE29329091F3300F5EBFE /* EHFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE28829091F3200F5EBFE /* EHFormModel.m */; };
 		2D1DE29429091F3300F5EBFE /* EHFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE28C29091F3200F5EBFE /* EHFormTableViewCell.m */; };
+		2D1DE299290921AD00F5EBFE /* TestCustomTitleViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE298290921AD00F5EBFE /* TestCustomTitleViewViewController.m */; };
+		2D1DE29C2909221C00F5EBFE /* TestCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE29B2909221C00F5EBFE /* TestCustomViewController.m */; };
 		5E3006C9B25E00F9000C2E6C /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163A46A48CB0374763FC98D0 /* libPods-demo.a */; };
 		9A497D41248DFE4900396DF7 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D40248DFE4900396DF7 /* App.storyboard */; };
 		9A497D43248DFE5400396DF7 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D42248DFE5400396DF7 /* News.storyboard */; };
@@ -69,6 +71,10 @@
 		2D1DE28929091F3200F5EBFE /* EHFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormModel.h; sourceTree = "<group>"; };
 		2D1DE28C29091F3200F5EBFE /* EHFormTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTableViewCell.m; sourceTree = "<group>"; };
 		2D1DE28D29091F3200F5EBFE /* EHFormTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableViewCell.h; sourceTree = "<group>"; };
+		2D1DE297290921AD00F5EBFE /* TestCustomTitleViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCustomTitleViewViewController.h; sourceTree = "<group>"; };
+		2D1DE298290921AD00F5EBFE /* TestCustomTitleViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCustomTitleViewViewController.m; sourceTree = "<group>"; };
+		2D1DE29A2909221C00F5EBFE /* TestCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCustomViewController.h; sourceTree = "<group>"; };
+		2D1DE29B2909221C00F5EBFE /* TestCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCustomViewController.m; sourceTree = "<group>"; };
 		6A4D366F5329253B8AF0328F /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		6EB90AEA2B53B12E58A9CF4C /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		9A497D40248DFE4900396DF7 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
@@ -230,6 +236,25 @@
 				2D1DE28D29091F3200F5EBFE /* EHFormTableViewCell.h */,
 			);
 			path = EHFormTableViewCell;
+			sourceTree = "<group>";
+		};
+		2D1DE2952909217600F5EBFE /* 自定义 */ = {
+			isa = PBXGroup;
+			children = (
+				2D1DE2962909218000F5EBFE /* 自定义标题栏 */,
+				2D1DE29A2909221C00F5EBFE /* TestCustomViewController.h */,
+				2D1DE29B2909221C00F5EBFE /* TestCustomViewController.m */,
+			);
+			path = "自定义";
+			sourceTree = "<group>";
+		};
+		2D1DE2962909218000F5EBFE /* 自定义标题栏 */ = {
+			isa = PBXGroup;
+			children = (
+				2D1DE297290921AD00F5EBFE /* TestCustomTitleViewViewController.h */,
+				2D1DE298290921AD00F5EBFE /* TestCustomTitleViewViewController.m */,
+			);
+			path = "自定义标题栏";
 			sourceTree = "<group>";
 		};
 		9A497D3F248DFE2A00396DF7 /* Storyboard */ = {
@@ -421,6 +446,7 @@
 		9AD7A6B62488CF7B000FA565 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				2D1DE2952909217600F5EBFE /* 自定义 */,
 				9ABEC941249747F700DF2C1A /* 功能 */,
 				9ADA4A3D2492146B00D3F2E8 /* 极端测试 */,
 				9ADA4A2C2491FDCB00D3F2E8 /* 原生控件 */,
@@ -846,6 +872,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD7A75D2488F4A7000FA565 /* UIView+ZYExtension.m in Sources */,
+				2D1DE299290921AD00F5EBFE /* TestCustomTitleViewViewController.m in Sources */,
 				9AB554A324A88ACE009B0127 /* StopPopGestureRecognizerViewController.m in Sources */,
 				2D1DE277290919DD00F5EBFE /* TestNativeControlsViewController.m in Sources */,
 				9AC0FD0224F7899C006FE6C6 /* ExitViewController.m in Sources */,
@@ -874,6 +901,7 @@
 				9ADA4A3C2492145200D3F2E8 /* TestExtremeViewController.m in Sources */,
 				2D1DE29329091F3300F5EBFE /* EHFormModel.m in Sources */,
 				2D1DE28E29091F3300F5EBFE /* EHFormTableView.m in Sources */,
+				2D1DE29C2909221C00F5EBFE /* TestCustomViewController.m in Sources */,
 				9A818E5C2489ECD0003EC518 /* ZYUserDefaults.m in Sources */,
 				9AD7A6C42488D056000FA565 /* MainViewController.m in Sources */,
 				9AD7A6C82488D0D8000FA565 /* BaseNavigationController.m in Sources */,

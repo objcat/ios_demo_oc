@@ -19,6 +19,14 @@
 
 @implementation BaseViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 设置自定义titleView
+    [self configTitleView];
+    // 设置返回按钮
+    [self configBackButton];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     // 禁用某页面返回按钮功能
@@ -103,14 +111,6 @@
     }
     self.navigationController.navigationBar.backIndicatorImage = image;
     self.navigationController.navigationBar.backIndicatorTransitionMaskImage = image;
-}
-
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    // 设置自定义titleView
-    [self configTitleView];
-    // 设置返回按钮
-    [self configBackButton];
 }
 
 /**

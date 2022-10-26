@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "TestZYKitViewController.h"
 #import "EHFormTableView.h"
+#import "TestCustomViewController.h"
 
 @interface MainViewController ()
 @property (strong, nonatomic) EHFormTableView *tableView;
@@ -40,6 +41,10 @@
 
     [tableView addNormalRowWithName:@"原生控件" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf performSegueWithIdentifier:@"TestNativeControlsViewControllerSegue" sender:model];
+    }];
+    
+    [tableView addNormalRowWithName:@"自定义" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
+        [self.navigationController pushViewController:[[TestCustomViewController alloc] init] animated:YES];
     }];
     
     [tableView addNormalRowWithName:@"功能" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
