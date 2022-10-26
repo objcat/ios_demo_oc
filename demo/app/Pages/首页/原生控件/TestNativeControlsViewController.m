@@ -1,20 +1,19 @@
 //
-//  TestControlsViewController.m
+//  TestNativeControlsViewController.m
 //  demo
 //
-//  Created by 张祎 on 2020/6/4
-//  Copyright © 2020 objcat. All rights reserved.
+//  Created by objcat on 2022/10/26.
+//  Copyright © 2022 objcat. All rights reserved.
 //
 
-
-#import "TestControlsViewController.h"
+#import "TestNativeControlsViewController.h"
 #import "EHFormTableView.h"
 
-@interface TestControlsViewController ()
+@interface TestNativeControlsViewController ()
 
 @end
 
-@implementation TestControlsViewController
+@implementation TestNativeControlsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

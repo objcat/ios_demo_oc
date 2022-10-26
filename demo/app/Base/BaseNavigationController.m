@@ -22,8 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 设置导航栏背景颜色, 这里使用99%透明度的图片作为背景, 既做到了不透明又不影响初始坐标系
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bar_image"] forBarMetrics:UIBarMetricsDefault];
     // 返回手势代理
     self.interactivePopGestureRecognizer.delegate = self;
 }

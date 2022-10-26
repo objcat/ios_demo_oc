@@ -8,7 +8,6 @@
 
 
 #import "MainViewController.h"
-#import "TestControlsViewController.h"
 #import "TestZYKitViewController.h"
 #import "EHFormTableView.h"
 
@@ -25,6 +24,9 @@
     self.navigationItem.title = @"Demo案例";
     // 创建tableView
     [self createTableView];
+    /**
+     如果你对这个项目一脸懵逼 我推荐你直接去`Main.storyboard`去看跳转逻辑 我的页面之间跳转是使用segue来实现的
+     */
 }
 
 - (void)createTableView {
@@ -37,19 +39,15 @@
     __weak typeof(self) weakSelf = self;
 
     [tableView addNormalRowWithName:@"原生控件" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf performSegueWithIdentifier:@"SecondViewController" sender:model];
+        [weakSelf performSegueWithIdentifier:@"TestNativeControlsViewControllerSegue" sender:model];
     }];
     
     [tableView addNormalRowWithName:@"功能" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf performSegueWithIdentifier:@"TestSkillViewController" sender:model];
-    }];
-    
-    [tableView addNormalRowWithName:@"ZYKit" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf performSegueWithIdentifier:@"ThirdViewController" sender:model];
+        [weakSelf performSegueWithIdentifier:@"TestSkillViewControllerSegue" sender:model];
     }];
     
     [tableView addNormalRowWithName:@"极端测试" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf performSegueWithIdentifier:@"FourthViewController" sender:model];
+        [weakSelf performSegueWithIdentifier:@"TestExtremeViewControllerSegue" sender:model];
     }];
 }
 

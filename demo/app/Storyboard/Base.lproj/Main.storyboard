@@ -9,42 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="SWM-Wc-8vi">
-            <objects>
-                <viewController id="6a5-gL-UKW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Tj-T2-Kpt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="yoJ-7R-WCk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fyl-IA-Qt2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oxZ-hO-U5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5874" y="1568"/>
-        </scene>
         <!--Main View Controller-->
         <scene sceneID="Qp6-B7-2hx">
             <objects>
                 <viewController id="SR7-n2-akG" customClass="MainViewController" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="jxQ-Wr-Bf6" kind="push" identifier="SecondViewController" id="PjK-Rk-T5I"/>
-                        <segue destination="xkV-xy-9Oo" kind="push" identifier="ThirdViewController" id="gZX-zm-bde"/>
-                        <segue destination="fhv-tw-6yM" kind="push" identifier="FourthViewController" id="W7q-2F-QqS"/>
-                        <segue destination="rXP-4c-qNj" kind="push" identifier="TestSkillViewController" id="XPB-sT-d2N"/>
-                        <segue destination="6a5-gL-UKW" kind="push" identifier="testSegue" id="o8x-PJ-no1"/>
+                        <segue destination="jxQ-Wr-Bf6" kind="push" identifier="TestNativeControlsViewControllerSegue" id="PjK-Rk-T5I"/>
+                        <segue destination="fhv-tw-6yM" kind="push" identifier="TestExtremeViewControllerSegue" id="W7q-2F-QqS"/>
+                        <segue destination="rXP-4c-qNj" kind="push" identifier="TestSkillViewControllerSegue" id="XPB-sT-d2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPR-DC-D1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4880" y="1815"/>
         </scene>
-        <!--Test Controls View Controller-->
+        <!--Test Native Controls View Controller-->
         <scene sceneID="uIF-Dh-GTU">
             <objects>
-                <viewController id="jxQ-Wr-Bf6" customClass="TestControlsViewController" sceneMemberID="viewController">
+                <viewController id="jxQ-Wr-Bf6" customClass="TestNativeControlsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="grG-Gf-ZZn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,22 +82,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHw-yu-BHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1950.7246376811595" y="-588.61607142857144"/>
-        </scene>
-        <!--TestZY Kit View Controller-->
-        <scene sceneID="wsg-hh-c0F">
-            <objects>
-                <viewController id="xkV-xy-9Oo" customClass="TestZYKitViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LO7-gN-fxF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="KWS-ca-Ikc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wpZ-H2-slC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2ix-7a-u0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="690" y="144"/>
         </scene>
         <!--Test Extreme View Controller-->
         <scene sceneID="aJg-TA-Aqe">

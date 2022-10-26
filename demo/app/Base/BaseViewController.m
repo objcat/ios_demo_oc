@@ -73,14 +73,6 @@
     });
 }
 
-/**
- * 使用baseTitleView取代系统原有的titleView使得自定义变的非常容易
- */
-+ (BaseTitleView *)defaultBaseTitleView {
-    BaseTitleView *baseTitleView = [[NSBundle mainBundle] loadNibNamed:@"BaseTitleView" owner:nil options:nil][0];
-    return baseTitleView;
-}
-
 - (void)configTitleView {
     if (self.baseTitleView) {
         // 设置返回按钮标题

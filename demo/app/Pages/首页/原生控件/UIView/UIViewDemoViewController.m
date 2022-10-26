@@ -19,6 +19,8 @@
     [super viewDidLoad];
     /**
      * 我们可以看到, 使用safeArea结合storyboard布局非常的方便
+     * 如果你什么也没看到也请前往`Main.storyboard`里面的同名控制器去看
+     * 或者直接搜索`UIViewDemoViewController`
      */
 }
 @end
