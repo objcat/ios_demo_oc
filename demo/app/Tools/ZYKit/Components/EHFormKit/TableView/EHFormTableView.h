@@ -1,15 +1,18 @@
 //
 //  EHFormTableView.h
-//  DABAN
+//  ExpandHouse
 //
 //  Created by 张祎 on 2018/9/12.
 //  Copyright © 2018年 objcat. All rights reserved.
-//
+//  https://github.com/objcat/EHFormKit
 
 #import <UIKit/UIKit.h>
 #import "EHFormModel.h"
+#import "EHTapTableViewCell.h"
+#import "EHWhiteRowTableViewCell.h"
 
-@protocol EHFormTableViewProtocol <NSObject>
+@protocol EHFormTableViewDelegate <NSObject>
+@optional
 /// 滚动代理方法 可以自己进行扩展
 - (void)eh_scrollViewDidScroll:(UIScrollView *)scrollView;
 @end
@@ -20,12 +23,15 @@
 /// 初始化方法, 默认frame是CGRectZero
 + (instancetype)tableView;
 
+/// 删除所有cell
+- (void)removeAllCells;
+
 /// 数据源
 @property (strong, nonatomic, readonly) NSMutableArray *sourceArray;
 /// 索引数组
 @property (strong, nonatomic, readonly) NSMutableArray *indexArray;
 /// 代理回调
-@property (weak, nonatomic) id <EHFormTableViewProtocol> formDelegate;
+@property (weak, nonatomic) id <EHFormTableViewDelegate> formDelegate;
 /// 开启自动滚动到文本框 - 防止键盘遮挡
 @property (assign, nonatomic) BOOL autoScrollToTextField;
 
@@ -33,7 +39,7 @@
 /// 插入表单
 /// @param name 标题
 /// @param value 值
-/// @param cell 类型(cell名称)
+/// @param cellClass cell类型
 /// @param useXib 是否使用Xib(区分注册方法)
 /// @param canTap 是否可点击(只负责tableView原生点击)
 /// @param canSelected 是否可选中
@@ -44,7 +50,7 @@
 /// @param callBack 所有事件回调
 - (EHFormModel *)addRowWithName:(NSString *)name
                           value:(NSString *)value
-                           cell:(NSString *)cell
+                      cellClass:(Class)cellClass
                          useXib:(BOOL)useXib
                          canTap:(BOOL)canTap
                     canSelected:(BOOL)canSelected
@@ -52,52 +58,107 @@
                 separatorHeight:(CGFloat)separatorHeight
                  separatorColor:(UIColor *)separatorColor
                 separatorOffset:(CGFloat)separatorOffset
-                       callBack:(void (^) (EHFormModel *model))callBack;
+                          index:(NSInteger)index
+                       callBack:(void (^) (EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack;
 
 
 /// 快速普通表单
 /// @param name 名称
 /// @param value 值
-/// @param cell 类型
+/// @param cellClass cell类型
 /// @param rowHeight 行高
 /// @param callBack 所有事件回调
 - (EHFormModel *)addNormalRowWithName:(NSString *)name
                                 value:(NSString *)value
-                                 cell:(NSString *)cell
+                            cellClass:(Class)cellClass
                             rowHeight:(CGFloat)rowHeight
-                             callBack:(void (^) (EHFormModel *model))callBack;
-
-///插入不能点击的表单
+                             callBack:(void (^) (EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack;
+/// 快速普通表单
 /// @param name 名称
 /// @param value 值
-/// @param cell 类型
+/// @param cellClass cell类型
+/// @param rowHeight 行高
+/// @param index 位置
+/// @param callBack 所有事件回调
+- (EHFormModel *)addNormalRowWithName:(NSString *)name
+                                value:(NSString *)value
+                            cellClass:(Class)cellClass
+                            rowHeight:(CGFloat)rowHeight
+                                index:(NSInteger)index
+                             callBack:(void (^) (EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack;
+
+/// 插入不能点击的表单
+/// @param name 名称
+/// @param value 值
+/// @param cellClass cell类型
 /// @param rowHeight 行高
 /// @param callBack 所有事件回调
 - (EHFormModel *)addUnableTapRowWithName:(NSString *)name
                                    value:(NSString *)value
-                                    cell:(NSString *)cell
+                               cellClass:(Class)cellClass
                                rowHeight:(CGFloat)rowHeight
-                                callBack:(void (^)(EHFormModel *model))callBack;
+                                callBack:(void (^)(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack;
+
+/// 插入不能点击的表单
+/// @param name 名称
+/// @param value 值
+/// @param cellClass cell类型
+/// @param rowHeight 行高
+/// @param index 位置
+/// @param callBack 所有事件回调
+- (EHFormModel *)addUnableTapRowWithName:(NSString *)name
+                                   value:(NSString *)value
+                               cellClass:(Class)cellClass
+                               rowHeight:(CGFloat)rowHeight
+                                   index:(NSInteger)index
+                                callBack:(void (^)(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack;
 
 
 /// 插入空白行
-/// @param cell cell类
+/// @param cellClass cell类型
 /// @param backgroundColor 分隔行颜色
 /// @param rowHeight 行高
 /// @param separatorHeight 下划线高度
 /// @param separatorColor 下划线颜色
 /// @param separatorOffset 下划线偏移量
-- (EHFormModel *)addWhiteRowWithcell:(NSString *)cell
-                     BackgroundColor:(UIColor *)backgroundColor
-                           rowHeight:(CGFloat)rowHeight
-                     separatorHeight:(CGFloat)separatorHeight
-                      separatorColor:(UIColor *)separatorColor
-                     separatorOffset:(CGFloat)separatorOffset;
+- (EHFormModel *)addWhiteRowWithCellClass:(Class)cellClass
+                          BackgroundColor:(UIColor *)backgroundColor
+                                rowHeight:(CGFloat)rowHeight
+                          separatorHeight:(CGFloat)separatorHeight
+                           separatorColor:(UIColor *)separatorColor
+                          separatorOffset:(CGFloat)separatorOffset;
+
+/// 插入空白行
+/// @param cellClass cell类型
+/// @param backgroundColor 分隔行颜色
+/// @param rowHeight 行高
+/// @param separatorHeight 下划线高度
+/// @param separatorColor 下划线颜色
+/// @param separatorOffset 下划线偏移量
+/// @param index 位置
+- (EHFormModel *)addWhiteRowWithCellClass:(Class)cellClass
+                          BackgroundColor:(UIColor *)backgroundColor
+                                rowHeight:(CGFloat)rowHeight
+                          separatorHeight:(CGFloat)separatorHeight
+                           separatorColor:(UIColor *)separatorColor
+                          separatorOffset:(CGFloat)separatorOffset
+                                    index:(NSInteger)index;
 
 
-/// 根据标题获取模型
-/// @param name 标题(name)
-- (EHFormModel *)firstModelWithName:(NSString *)name;
+/// 根据ID获取第一个模型
+/// @param ID 编号(name)
+- (EHFormModel *)firstModelWithID:(NSString *)ID;
+
+/// 根据ID获取indexPath
+/// @param ID 编号(name)
+- (NSIndexPath *)indexPathWithID:(NSString *)ID;
+
+/// 根据model获取indexPath
+/// @param model 模型
+- (NSIndexPath *)indexPathWithModel:(EHFormModel *)model;
+
+/// 根据ID刷新Cell
+- (void)reloadDataWithID:(NSString *)ID;
 
 /// 获取所有指定标题模型的数组
 /// @param name 标题(name)
@@ -135,6 +196,9 @@
 /// @param index 索引
 /// @param reloadData 是否刷新
 - (void)removeRowWithIndexFromSourceArray:(NSInteger)index reloadData:(BOOL)reloadData;
+
+/// 导出键值对
+- (NSMutableDictionary *)dumpNameAndValue;
 
 /// 导出提交字典
 - (NSMutableDictionary *)dumpSubmitDictionary;

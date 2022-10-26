@@ -37,7 +37,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.lineLayer.frame = CGRectMake(self.model.separatorOffset, self.contentView.frame.size.height - self.model.separatorHeight, self.contentView.frame.size.width - self.model.separatorOffset, self.model.separatorHeight);
+    self.lineLayer.frame = CGRectMake(self.model.separatorOffset, self.contentView.frame.size.height - self.model.separatorHeight, self.contentView.frame.size.width - self.model.separatorOffset * 2, self.model.separatorHeight);
     self.lineLayer.backgroundColor = self.model.separatorColor.CGColor;
 }
 

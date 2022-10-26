@@ -38,15 +38,15 @@
     
     __weak typeof(self) weakSelf = self;
 
-    [tableView addNormalRowWithName:@"原生控件" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"原生控件" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf performSegueWithIdentifier:@"TestNativeControlsViewControllerSegue" sender:model];
     }];
     
-    [tableView addNormalRowWithName:@"功能" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"功能" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf performSegueWithIdentifier:@"TestSkillViewControllerSegue" sender:model];
     }];
     
-    [tableView addNormalRowWithName:@"极端测试" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"极端测试" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf performSegueWithIdentifier:@"TestExtremeViewControllerSegue" sender:model];
     }];
 }

@@ -32,30 +32,17 @@
     
     __weak typeof(self) weakSelf = self;
     
-    [tableView addNormalRowWithName:@"返回按钮拦截" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"返回按钮拦截" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf.navigationController pushViewController:[[BackButtonHookViewController alloc] init] animated:YES];
     }];
     
-    [tableView addNormalRowWithName:@"禁用某页面的返回手势" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"禁用某页面的返回手势" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf.navigationController pushViewController:[[StopPopGestureRecognizerViewController alloc] init] animated:YES];
     }];
     
-    [tableView addNormalRowWithName:@"退出程序" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
-        [weakSelf.navigationController pushViewController:[[ExitViewController alloc] init] animated:YES];
+    [tableView addNormalRowWithName:@"退出程序" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
+        [weakSelf.navigationController pushViewController:[[BackButtonHookViewController alloc] init] animated:YES];
     }];
-    
-
-    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

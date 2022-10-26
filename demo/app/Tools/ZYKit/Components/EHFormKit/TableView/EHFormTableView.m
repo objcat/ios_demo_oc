@@ -1,16 +1,14 @@
 //
 //  EHFormTableView.m
-//  DABAN
+//  ExpandHouse
 //
 //  Created by 张祎 on 2018/9/12.
 //  Copyright © 2018年 objcat. All rights reserved.
-//
+//  https://github.com/objcat/EHFormKit
 
 #import "EHFormTableView.h"
 #import "EHFormTableViewCell.h"
 #import "EHWhiteRowTableViewCell.h"
-#import "EHButtonTableViewCell.h"
-#import "EHSwitchTableViewCell.h"
 
 #define TABLEFRAME self.frame
 
@@ -40,6 +38,7 @@
 
 + (instancetype)tableView {
     EHFormTableView *tableView = [[self alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    tableView.backgroundColor = [UIColor whiteColor];
     return tableView;
 }
 
@@ -71,7 +70,6 @@
         CGRect frame = self.frame;
         frame.size.height = self.upHeight - keyboardSize.height;
         self.frame = frame;
-        [self scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.editRow inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:NO];
     }];
 }
 
@@ -118,7 +116,7 @@
 
 - (EHFormModel *)addRowWithName:(NSString *)name
                           value:(NSString *)value
-                           cell:(NSString *)cell
+                      cellClass:(Class)cellClass
                          useXib:(BOOL)useXib
                          canTap:(BOOL)canTap
                     canSelected:(BOOL)canSelected
@@ -126,12 +124,14 @@
                 separatorHeight:(CGFloat)separatorHeight
                  separatorColor:(UIColor *)separatorColor
                 separatorOffset:(CGFloat)separatorOffset
-                       callBack:(void (^) (EHFormModel *model))callBack {
+                          index:(NSInteger)index
+                       callBack:(void (^) (EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack {
     
     EHFormModel *model = [[EHFormModel alloc] init];
+    model.ID = name;
     model.name = name;
     model.value = value ? : @"";
-    model.cell = cell;
+    model.cellClass = cellClass;
     model.useXib = useXib;
     model.canSelected = canSelected;
     model.canTap = canTap;
@@ -141,44 +141,86 @@
     model.separatorColor = separatorColor;
     model.separatorOffset = separatorOffset;
     model.userInteractionEnabled = YES;
+    model.tableView = self;
     
-    [self.sourceArray addObject:model];
+    if (index == -1) {
+        [self.sourceArray addObject:model];
+    } else {
+        [self.sourceArray insertObject:model atIndex:index];
+    }
     
     return model;
 }
 
 - (EHFormModel *)addNormalRowWithName:(NSString *)name
                                 value:(NSString *)value
-                                 cell:(NSString *)cell
+                            cellClass:(Class)cellClass
                             rowHeight:(CGFloat)rowHeight
-                             callBack:(void (^)(EHFormModel *model))callBack {
-    return [self addRowWithName:name value:value cell:cell useXib:YES canTap:YES canSelected:YES rowHeight:rowHeight separatorHeight:0.5 separatorColor:self.sColor separatorOffset:self.sOffset callBack:callBack];
+                             callBack:(void (^)(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack {
+    return [self addRowWithName:name value:value cellClass:cellClass useXib:YES canTap:YES canSelected:YES rowHeight:rowHeight separatorHeight:0 separatorColor:self.sColor separatorOffset:self.sOffset index:-1 callBack:callBack];
 }
+
+- (EHFormModel *)addNormalRowWithName:(NSString *)name
+                                value:(NSString *)value
+                            cellClass:(Class)cellClass
+                            rowHeight:(CGFloat)rowHeight
+                                index:(NSInteger)index
+                             callBack:(void (^)(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack {
+    return [self addRowWithName:name value:value cellClass:cellClass useXib:YES canTap:YES canSelected:YES rowHeight:rowHeight separatorHeight:0 separatorColor:self.sColor separatorOffset:self.sOffset index:index callBack:callBack];
+}
+
 
 - (EHFormModel *)addUnableTapRowWithName:(NSString *)name
                                    value:(NSString *)value
-                                    cell:(NSString *)cell
+                               cellClass:(Class)cellClass
                                rowHeight:(CGFloat)rowHeight
-                                callBack:(void (^)(EHFormModel *model))callBack {
-    return [self addRowWithName:name value:value cell:cell useXib:YES canTap:NO canSelected:NO rowHeight:rowHeight separatorHeight:0.5 separatorColor:self.sColor separatorOffset:self.sOffset callBack:callBack];
+                                callBack:(void (^)(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack {
+    return [self addRowWithName:name value:value cellClass:cellClass useXib:YES canTap:NO canSelected:NO rowHeight:rowHeight separatorHeight:0 separatorColor:self.sColor separatorOffset:self.sOffset index:-1 callBack:callBack];
 }
 
-- (EHFormModel *)addWhiteRowWithcell:(NSString *)cell
-                     BackgroundColor:(UIColor *)backgroundColor
-                           rowHeight:(CGFloat)rowHeight
-                     separatorHeight:(CGFloat)separatorHeight
-                      separatorColor:(UIColor *)separatorColor
-                     separatorOffset:(CGFloat)separatorOffset {
+
+
+- (EHFormModel *)addUnableTapRowWithName:(NSString *)name
+                                   value:(NSString *)value
+                               cellClass:(Class)cellClass
+                               rowHeight:(CGFloat)rowHeight
+                                   index:(NSInteger)index
+                                callBack:(void (^)(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary))callBack {
+    return [self addRowWithName:name value:value cellClass:cellClass useXib:YES canTap:NO canSelected:NO rowHeight:rowHeight separatorHeight:0 separatorColor:self.sColor separatorOffset:self.sOffset index:index callBack:callBack];
+}
+
+- (EHFormModel *)addWhiteRowWithCellClass:(Class)cellClass
+                          BackgroundColor:(UIColor *)backgroundColor
+                                rowHeight:(CGFloat)rowHeight
+                          separatorHeight:(CGFloat)separatorHeight
+                           separatorColor:(UIColor *)separatorColor
+                          separatorOffset:(CGFloat)separatorOffset {
+    return [self addWhiteRowWithCellClass:cellClass BackgroundColor:backgroundColor rowHeight:rowHeight separatorHeight:separatorHeight separatorColor:separatorColor separatorOffset:separatorOffset index:-1];
+}
+
+- (EHFormModel *)addWhiteRowWithCellClass:(Class)cellClass
+                          BackgroundColor:(UIColor *)backgroundColor
+                                rowHeight:(CGFloat)rowHeight
+                          separatorHeight:(CGFloat)separatorHeight
+                           separatorColor:(UIColor *)separatorColor
+                          separatorOffset:(CGFloat)separatorOffset
+                                    index:(NSInteger)index {
     
     EHFormModel *whiteRow = [[EHFormModel alloc] init];
     whiteRow.rowHeight = rowHeight;
     whiteRow.isWhiteRow = YES;
-    whiteRow.cell = cell;
+    whiteRow.cellClass = cellClass;
     whiteRow.separatorHeight = separatorHeight;
     whiteRow.separatorColor = separatorColor;
     whiteRow.separatorOffset = separatorOffset;
     whiteRow.backgroundColor = backgroundColor;
-    [self.sourceArray addObject:whiteRow];
+    
+    if (index == -1) {
+        [self.sourceArray addObject:whiteRow];
+    } else {
+        [self.sourceArray insertObject:whiteRow atIndex:index];
+    }
+    
     return whiteRow;
 }
 
@@ -199,6 +241,10 @@
     return arr;
 }
 
+- (void)removeAllCells {
+    self.sourceArray = [NSMutableArray array];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.sourceArray.count;
 }
@@ -207,16 +253,18 @@
     
     EHFormModel *model = self.sourceArray[indexPath.row];
     
-    // 是否使用Xib
+    NSString *cellName = NSStringFromClass(model.cellClass);
+    
+    // 检测是否注册 经调研 反复注册并不会引发性能问题
     if (model.useXib) {
-        [self registerNib:[UINib nibWithNibName:model.cell bundle:nil] forCellReuseIdentifier:model.cell];
+        [self registerNib:[UINib nibWithNibName:cellName bundle:nil] forCellReuseIdentifier:model.reuseId];
     } else {
-        [self registerClass:NSClassFromString(model.cell) forCellReuseIdentifier:model.cell];
+        [self registerClass:NSClassFromString(cellName) forCellReuseIdentifier:model.reuseId];
     }
     
     __weak typeof(self) weakSelf = self;
     // 使用多态节省代码
-    EHFormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:model.cell];
+    EHFormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:model.reuseId forIndexPath:indexPath];
     cell.model = model;
     // 事件回调
     cell.callBack = model.callBack;
@@ -225,9 +273,14 @@
         // 获取文本框所在行, 主要用于滚动到所在行, 防止键盘遮挡文本输入框, 默认不开启 autoScrollToTextField
         weakSelf.editRow = [weakSelf.sourceArray indexOfObject:formModel];
     };
-    if (model.canSelected) cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-    else cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    // 设置是否可选中
+    if (model.canSelected) {
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    } else {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     cell.contentView.userInteractionEnabled = model.userInteractionEnabled;
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
@@ -257,7 +310,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     EHFormModel *model = self.sourceArray[indexPath.row];
     if (model.callBack && model.canTap) {
-        model.callBack(model);
+        model.callBack(model, EHFormModelEventTypeCell, nil);
     }
     [self endEditing:YES];
 }
@@ -337,6 +390,16 @@
     [center removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
+- (NSMutableDictionary *)dumpNameAndValue {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    for (EHFormModel *model in self.indexArray) {
+        if (model.ID && ![model.ID isEqualToString:@""]) {
+            dic[model.ID] = model.value ? : @"";
+        }
+    }
+    return dic;
+}
+
 - (NSMutableDictionary *)dumpSubmitDictionary {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     for (EHFormModel *model in self.indexArray) {
@@ -383,13 +446,44 @@
     return pass;
 }
 
-- (EHFormModel *)firstModelWithName:(NSString *)name {
+- (EHFormModel *)firstModelWithID:(NSString *)ID {
     for (EHFormModel *model in self.sourceArray) {
-        if ([model.name isEqualToString:name]) {
+        if ([model.ID isEqualToString:ID]) {
             return model;
         }
     }
     return nil;
+}
+
+- (NSIndexPath *)indexPathWithID:(NSString *)ID {
+    for (EHFormModel *model in self.sourceArray) {
+        if ([model.ID isEqualToString:ID]) {
+            return [self indexPathWithModel:model];
+        }
+    }
+    return nil;
+}
+
+- (NSIndexPath *)indexPathWithModel:(EHFormModel *)model {
+    return [NSIndexPath indexPathForRow:[self.sourceArray indexOfObject:model] ? : 0 inSection:0];
+}
+
+- (void)reloadDataWithID:(NSString *)ID {
+    EHFormModel *result = nil;
+    for (EHFormModel *model in self.sourceArray) {
+        if ([model.ID isEqualToString:ID]) {
+            result = model;
+        }
+    }
+    if (result != nil) {
+        NSInteger index = [self.sourceArray indexOfObject:result];
+        [UIView performWithoutAnimation:^{
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+            if (indexPath) {
+                [self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            }
+        }];
+    }
 }
 
 - (NSArray *)modelsWithName:(NSString *)name {

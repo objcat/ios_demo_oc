@@ -27,15 +27,13 @@
     [self.view addSubview:tableView];
     
     __weak typeof(self) weakSelf = self;
-    
-    [tableView addNormalRowWithName:@"UIView" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"UIView" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf performSegueWithIdentifier:@"UIViewDemoViewController" sender:model];
     }];
     
-    [tableView addNormalRowWithName:@"UITextField" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+    [tableView addNormalRowWithName:@"UITextField" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf performSegueWithIdentifier:@"UITextFieldDemoViewController" sender:model];
     }];
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

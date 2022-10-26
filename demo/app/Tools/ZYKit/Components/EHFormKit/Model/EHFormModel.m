@@ -19,9 +19,18 @@
     self = [super init];
     if (self) {
         self.ext = [NSMutableDictionary dictionary];
+        self.arr = [NSMutableArray array];
         self.submitValue = @"";
     }
     return self;
+}
+
+- (NSString *)reuseId {
+    if (_reuseId) {
+        return _reuseId;
+    } else {
+        return NSStringFromClass(self.cellClass);
+    }
 }
 
 + (EHFormModel *)converEHFormModel:(id)object {
@@ -33,7 +42,7 @@
 }
 
 - (BOOL)useXib {
-    NSString *path = [[NSBundle mainBundle] pathForResource:self.cell ofType:@"nib"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:NSStringFromClass(self.cellClass) ofType:@"nib"];
     if (path) {
         return YES;
     } else {

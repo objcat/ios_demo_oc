@@ -9,7 +9,7 @@
 #import "EHFormModel.h"
 
 @interface EHFormTableViewCell : UITableViewCell
-@property (copy, nonatomic) void (^callBack) (EHFormModel *model);
+@property (copy, nonatomic) void (^callBack) (EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary);
 @property (strong, nonatomic) void (^beginEditingBlock) (EHFormModel *model);
 @property (nonatomic, strong) CALayer *lineLayer;
 @property (nonatomic, strong) EHFormModel *model;
