@@ -15,12 +15,4 @@
 
 @implementation BaseCustomTitleView
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
-- (CGSize)intrinsicContentSize {
-    return UILayoutFittingCompressedSize;
-}
-
 @end

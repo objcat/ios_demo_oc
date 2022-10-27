@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseCustomTitleView : UIView
-@property (weak, nonatomic) UILabel *titleLabel;
+
 @end

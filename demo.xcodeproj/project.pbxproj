@@ -51,9 +51,6 @@
 		9ADA4A2A2491BE3300D3F2E8 /* ApiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A292491BE3300D3F2E8 /* ApiMap.m */; };
 		9ADA4A322491FE8800D3F2E8 /* UIViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A312491FE8800D3F2E8 /* UIViewDemoViewController.m */; };
 		9ADA4A36249201CC00D3F2E8 /* UITextFieldDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A35249201CC00D3F2E8 /* UITextFieldDemoViewController.m */; };
-		9ADA4A3C2492145200D3F2E8 /* TestExtremeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A3B2492145200D3F2E8 /* TestExtremeViewController.m */; };
-		9ADA4A44249215CA00D3F2E8 /* TooLongTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A43249215CA00D3F2E8 /* TooLongTitleViewController.m */; };
-		9ADA4A472492163000D3F2E8 /* TooMuchBarButtonItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A462492163000D3F2E8 /* TooMuchBarButtonItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,12 +135,6 @@
 		9ADA4A312491FE8800D3F2E8 /* UIViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewDemoViewController.m; sourceTree = "<group>"; };
 		9ADA4A34249201CC00D3F2E8 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		9ADA4A35249201CC00D3F2E8 /* UITextFieldDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDemoViewController.m; sourceTree = "<group>"; };
-		9ADA4A3A2492145100D3F2E8 /* TestExtremeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestExtremeViewController.h; sourceTree = "<group>"; };
-		9ADA4A3B2492145200D3F2E8 /* TestExtremeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestExtremeViewController.m; sourceTree = "<group>"; };
-		9ADA4A42249215CA00D3F2E8 /* TooLongTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TooLongTitleViewController.h; sourceTree = "<group>"; };
-		9ADA4A43249215CA00D3F2E8 /* TooLongTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TooLongTitleViewController.m; sourceTree = "<group>"; };
-		9ADA4A452492163000D3F2E8 /* TooMuchBarButtonItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TooMuchBarButtonItemViewController.h; sourceTree = "<group>"; };
-		9ADA4A462492163000D3F2E8 /* TooMuchBarButtonItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TooMuchBarButtonItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +340,8 @@
 		9ABEC941249747F700DF2C1A /* 功能 */ = {
 			isa = PBXGroup;
 			children = (
+				9ABEC93E2497476000DF2C1A /* TestSkillViewController.h */,
+				9ABEC93F2497476000DF2C1A /* TestSkillViewController.m */,
 				9AC0FCFF24F78987006FE6C6 /* 退出程序 */,
 				9AB554A024A88A96009B0127 /* 禁用某页面的返回手势 */,
 				9ABEC9422497480E00DF2C1A /* 返回按钮拦截 */,
@@ -453,7 +446,6 @@
 			children = (
 				2D1DE2952909217600F5EBFE /* 自定义 */,
 				9ABEC941249747F700DF2C1A /* 功能 */,
-				9ADA4A3D2492146B00D3F2E8 /* 极端测试 */,
 				9ADA4A2C2491FDCB00D3F2E8 /* 原生控件 */,
 				9AD7A6BC2488CFF3000FA565 /* 首页页面 */,
 			);
@@ -475,10 +467,6 @@
 				9AD7A6C22488D056000FA565 /* MainViewController.m */,
 				9AC1714F248F69D000F3C594 /* TestZYKitViewController.h */,
 				9AC17150248F69D000F3C594 /* TestZYKitViewController.m */,
-				9ADA4A3A2492145100D3F2E8 /* TestExtremeViewController.h */,
-				9ADA4A3B2492145200D3F2E8 /* TestExtremeViewController.m */,
-				9ABEC93E2497476000DF2C1A /* TestSkillViewController.h */,
-				9ABEC93F2497476000DF2C1A /* TestSkillViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -695,49 +683,6 @@
 			path = UITextField;
 			sourceTree = "<group>";
 		};
-		9ADA4A3D2492146B00D3F2E8 /* 极端测试 */ = {
-			isa = PBXGroup;
-			children = (
-				9ADA4A3F2492154000D3F2E8 /* 超多按钮 */,
-				9ADA4A3E2492153900D3F2E8 /* 超长标题 */,
-			);
-			path = "极端测试";
-			sourceTree = "<group>";
-		};
-		9ADA4A3E2492153900D3F2E8 /* 超长标题 */ = {
-			isa = PBXGroup;
-			children = (
-				9ADA4A412492159000D3F2E8 /* Controller */,
-			);
-			path = "超长标题";
-			sourceTree = "<group>";
-		};
-		9ADA4A3F2492154000D3F2E8 /* 超多按钮 */ = {
-			isa = PBXGroup;
-			children = (
-				9ADA4A402492154600D3F2E8 /* Controller */,
-			);
-			path = "超多按钮";
-			sourceTree = "<group>";
-		};
-		9ADA4A402492154600D3F2E8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9ADA4A452492163000D3F2E8 /* TooMuchBarButtonItemViewController.h */,
-				9ADA4A462492163000D3F2E8 /* TooMuchBarButtonItemViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		9ADA4A412492159000D3F2E8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9ADA4A42249215CA00D3F2E8 /* TooLongTitleViewController.h */,
-				9ADA4A43249215CA00D3F2E8 /* TooLongTitleViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		B1777628E2B6FA833057D8F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -886,14 +831,12 @@
 				9AC17151248F69D000F3C594 /* TestZYKitViewController.m in Sources */,
 				9AD7A6712488C001000FA565 /* AppDelegate.m in Sources */,
 				9A818E472489E1FD003EC518 /* NSString+ZYExtension.m in Sources */,
-				9ADA4A472492163000D3F2E8 /* TooMuchBarButtonItemViewController.m in Sources */,
 				9AD7A7592488F4A2000FA565 /* UIColor+ZYExtension.m in Sources */,
 				2D1DE29029091F3300F5EBFE /* EHWhiteRowTableViewCell.m in Sources */,
 				9AD7A7162488D459000FA565 /* MineViewController.m in Sources */,
 				9AD7A6822488C003000FA565 /* main.m in Sources */,
 				9A818E4F2489E494003EC518 /* NSDate+ZYExtension.m in Sources */,
 				2D1DE29229091F3300F5EBFE /* EHTapTableViewCell.m in Sources */,
-				9ADA4A44249215CA00D3F2E8 /* TooLongTitleViewController.m in Sources */,
 				9ADA4A322491FE8800D3F2E8 /* UIViewDemoViewController.m in Sources */,
 				9AD7A72B2488E261000FA565 /* BaseCustomTitleView.m in Sources */,
 				9ABEC9452497482C00DF2C1A /* BackButtonHookViewController.m in Sources */,
@@ -904,7 +847,6 @@
 				2D1DE29429091F3300F5EBFE /* EHFormTableViewCell.m in Sources */,
 				9ABEC9402497476000DF2C1A /* TestSkillViewController.m in Sources */,
 				9AD7A7222488D523000FA565 /* BaseTabBarController.m in Sources */,
-				9ADA4A3C2492145200D3F2E8 /* TestExtremeViewController.m in Sources */,
 				2D1DE29329091F3300F5EBFE /* EHFormModel.m in Sources */,
 				2D1DE28E29091F3300F5EBFE /* EHFormTableView.m in Sources */,
 				2D1DE29C2909221C00F5EBFE /* TestCustomViewController.m in Sources */,

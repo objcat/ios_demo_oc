@@ -41,7 +41,7 @@
     }];
     
     [tableView addNormalRowWithName:@"退出程序" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
-        [weakSelf.navigationController pushViewController:[[BackButtonHookViewController alloc] init] animated:YES];
+        [weakSelf.navigationController pushViewController:[[ExitViewController alloc] init] animated:YES];
     }];
 }
 

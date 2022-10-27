@@ -30,24 +30,24 @@
     
     [self.tableView addNormalRowWithName:@"自定义label标题栏" value:@"" cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         UILabel *label = [[UILabel alloc] init];
-        label.text = @"自定义label标题栏";
+        label.text = @"我是自定义label";
         weakSelf.customTitleView = label;
     }];
     
     [self.tableView addNormalRowWithName:@"自定义label长标题栏" value:@"" cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         UILabel *label = [[UILabel alloc] init];
-        label.text = @"123456789123456789123456789123456789123456789";
+        label.text = @"我是超长label*(&#89473289748932746781263872613908192083";
         weakSelf.customTitleView = label;
     }];
     
     [self.tableView addNormalRowWithName:@"带图标的标题栏" value:@"" cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
-        BaseCustomTitleView *customTitleView = [ZYCustomTitleView defaultTitleView];
+        ZYCustomTitleView *customTitleView = [ZYCustomTitleView defaultTitleView];
         customTitleView.titleLabel.text = @"我是只猫";
         weakSelf.customTitleView = customTitleView;
     }];
     
     [self.tableView addNormalRowWithName:@"带图标的长标题栏" value:@"" cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
-        BaseCustomTitleView *customTitleView = [ZYCustomTitleView defaultTitleView];
+        ZYCustomTitleView *customTitleView = [ZYCustomTitleView defaultTitleView];
         customTitleView.titleLabel.text = @"我是只猫156243561243562143562145632145632145634";
         weakSelf.customTitleView = customTitleView;
     }];

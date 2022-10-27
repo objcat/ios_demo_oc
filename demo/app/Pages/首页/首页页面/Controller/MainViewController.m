@@ -50,10 +50,6 @@
     [tableView addNormalRowWithName:@"功能" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         [weakSelf performSegueWithIdentifier:@"TestSkillViewControllerSegue" sender:model];
     }];
-    
-    [tableView addNormalRowWithName:@"极端测试" value:nil cellClass:[EHTapTableViewCell class] rowHeight:50 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
-        [weakSelf performSegueWithIdentifier:@"TestExtremeViewControllerSegue" sender:model];
-    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
