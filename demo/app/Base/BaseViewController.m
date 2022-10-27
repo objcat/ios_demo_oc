@@ -15,16 +15,13 @@
  * 所以通常情况下所有页面的返回按钮样式要保持一样 这里不支持动态修改
  */
 @property (strong, nonatomic) UIImage *backButtonImage;
+@property (strong, nonatomic) UIView *nativeTitleView;
 @end
 
 @implementation BaseViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    // 设置自定义titleView
-    [self configTitleView];
-    // 设置返回按钮
-    [self configBackButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -55,19 +52,13 @@
 }
 
 - (void)defaultSetting {
-    // 默认返回按钮标题 随原标题
+    // 默认返回按钮标题 返回nil就是不配置 规则是首页push到二级页面后显示首页的标题 二级页面push到三级页面显示"Back"或"返回"
+    // 如果在这里配置标题, 会出现的情况是每个页面默认都是这个标题
     self.backButtonTitle = nil;
-    // 默认返回按钮颜色
-    self.backButtonTintColor = COLORHEX(@"#409EFF");
-    // 是否使用tintColor的颜色渲染返回按钮的图片
-    self.backButtonImageTemplete = YES;
     // 默认返回按钮图标 注释掉就是系统默认图标
     self.backButtonImage = [UIImage imageNamed:@"back"];
-    
-    /**
-     * 判断是否初始化了颜色 如果没有赋值成白色
-     * 加判断的目的是为了不影响storyboard中设置的初始背景颜色
-     */
+    // 判断是否初始化了颜色 如果没有赋值成白色
+    // 加判断的目的是为了不影响storyboard中设置的初始背景颜色
     if (self.view.backgroundColor == nil) {
         self.view.backgroundColor = [UIColor whiteColor];
     }
@@ -81,36 +72,38 @@
     });
 }
 
-- (void)configTitleView {
-    if (self.baseTitleView) {
-        // 设置返回按钮标题
-        self.navigationItem.titleView = self.baseTitleView;
+- (void)setBackButtonImage:(UIImage *)backButtonImage {
+    _backButtonImage = backButtonImage;
+    // 设置返回按钮图片
+    UIImage *image = self.backButtonImage;
+    // 保持原色 如果想渲染成tintColor就设置成 UIImageRenderingModeAlwaysTemplate
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.navigationController.navigationBar.backIndicatorImage = image;
+    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = image;
+}
+
+- (void)setBackButtonTitle:(NSString *)backButtonTitle {
+    _backButtonTitle = backButtonTitle;
+    if (_backButtonTitle) {
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:self.backButtonTitle ? self.backButtonTitle : @"" style:UIBarButtonItemStyleDone target:nil action:nil];
+        self.navigationItem.backBarButtonItem = backItem;
     }
 }
 
-- (void)configBackButton {
-    NSString *defaultText = nil;
-    // 如果当前控制器是自定义titleView
-    if (self.baseTitleView) {
-        defaultText = self.baseTitleView.titleLabel.text;
+- (void)setBackButtonTintColor:(UIColor *)backButtonTintColor {
+    _backButtonTintColor = backButtonTintColor;
+    self.navigationController.navigationBar.tintColor = backButtonTintColor;
+}
+
+- (void)setCustomTitleView:(UIView *)customTitleView {
+    if (customTitleView == nil) {
+        // 还原成原生titleView
+        self.navigationItem.titleView = nil;
     } else {
-        // 如果当前控制器不是自定义titleView
-        defaultText = self.navigationItem.title;
+        // 设置自定义titleView
+        _customTitleView = customTitleView;
+        self.navigationItem.titleView = _customTitleView;
     }
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:self.backButtonTitle ? self.backButtonTitle : defaultText style:UIBarButtonItemStyleDone target:nil action:nil];
-    backItem.tintColor = self.backButtonTintColor;
-    self.navigationItem.backBarButtonItem = backItem;
-    // 设置返回按钮图片
-    UIImage *image = self.backButtonImage;
-    if (self.backButtonImageTemplete) {
-        // 渲染
-        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    } else {
-        // 不渲染
-        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    }
-    self.navigationController.navigationBar.backIndicatorImage = image;
-    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = image;
 }
 
 /**
@@ -118,6 +111,7 @@
  * 经常导致控制器不能释放的问题, 归根结底就是对象被持有了, 只要引用计数>0, 对象就永远不会被释放
  * 1.block没有使用weakSelf
  * 2.子类持有父类对象使用了strong, 没有使用weak
+ * 3.timer没有释放掉
  */
 - (void)dealloc {
     NSLog(@"控制器释放---%@", NSStringFromClass([self class]));

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.baseTitleView.titleLabel.text = @"超长标题超长标题超长标题超长标题超长标题超长标题";
+//    self.customTitleView.titleLabel.text = @"超长标题超长标题超长标题超长标题超长标题超长标题";
 }
 
 /*

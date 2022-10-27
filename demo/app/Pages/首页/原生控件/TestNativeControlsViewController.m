@@ -39,7 +39,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EHFormModel *model = sender;
     BaseViewController *vc = segue.destinationViewController;
-    vc.baseTitleView.titleLabel.text = model.name;
+    vc.navigationItem.title = model.name;
 }
 
 @end

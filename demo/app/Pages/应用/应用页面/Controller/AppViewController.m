@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.baseTitleView.titleLabel.text = @"应用";
+    self.navigationItem.title = @"应用";
 }
 
 /*

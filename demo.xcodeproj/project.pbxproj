@@ -17,6 +17,7 @@
 		2D1DE29429091F3300F5EBFE /* EHFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE28C29091F3200F5EBFE /* EHFormTableViewCell.m */; };
 		2D1DE299290921AD00F5EBFE /* TestCustomTitleViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE298290921AD00F5EBFE /* TestCustomTitleViewViewController.m */; };
 		2D1DE29C2909221C00F5EBFE /* TestCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DE29B2909221C00F5EBFE /* TestCustomViewController.m */; };
+		2D759246290A1AE600A7A7E7 /* ZYCustomTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D759245290A1AE600A7A7E7 /* ZYCustomTitleView.m */; };
 		5E3006C9B25E00F9000C2E6C /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163A46A48CB0374763FC98D0 /* libPods-demo.a */; };
 		9A497D41248DFE4900396DF7 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D40248DFE4900396DF7 /* App.storyboard */; };
 		9A497D43248DFE5400396DF7 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A497D42248DFE5400396DF7 /* News.storyboard */; };
@@ -43,8 +44,8 @@
 		9AD7A71B2488D46F000FA565 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A7192488D46F000FA565 /* NewsViewController.m */; };
 		9AD7A7222488D523000FA565 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A7212488D523000FA565 /* BaseTabBarController.m */; };
 		9AD7A7272488D77A000FA565 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A7262488D77A000FA565 /* Images.xcassets */; };
-		9AD7A72B2488E261000FA565 /* BaseTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A72A2488E261000FA565 /* BaseTitleView.m */; };
-		9AD7A72D2488E26A000FA565 /* BaseTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A72C2488E26A000FA565 /* BaseTitleView.xib */; };
+		9AD7A72B2488E261000FA565 /* BaseCustomTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A72A2488E261000FA565 /* BaseCustomTitleView.m */; };
+		9AD7A72D2488E26A000FA565 /* ZYCustomTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7A72C2488E26A000FA565 /* ZYCustomTitleView.xib */; };
 		9AD7A7592488F4A2000FA565 /* UIColor+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A7582488F4A2000FA565 /* UIColor+ZYExtension.m */; };
 		9AD7A75D2488F4A7000FA565 /* UIView+ZYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A75C2488F4A7000FA565 /* UIView+ZYExtension.m */; };
 		9ADA4A2A2491BE3300D3F2E8 /* ApiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA4A292491BE3300D3F2E8 /* ApiMap.m */; };
@@ -75,6 +76,8 @@
 		2D1DE298290921AD00F5EBFE /* TestCustomTitleViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCustomTitleViewViewController.m; sourceTree = "<group>"; };
 		2D1DE29A2909221C00F5EBFE /* TestCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCustomViewController.h; sourceTree = "<group>"; };
 		2D1DE29B2909221C00F5EBFE /* TestCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCustomViewController.m; sourceTree = "<group>"; };
+		2D759244290A1AE600A7A7E7 /* ZYCustomTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYCustomTitleView.h; sourceTree = "<group>"; };
+		2D759245290A1AE600A7A7E7 /* ZYCustomTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYCustomTitleView.m; sourceTree = "<group>"; };
 		6A4D366F5329253B8AF0328F /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		6EB90AEA2B53B12E58A9CF4C /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		9A497D40248DFE4900396DF7 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
@@ -121,9 +124,9 @@
 		9AD7A7202488D523000FA565 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		9AD7A7212488D523000FA565 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		9AD7A7262488D77A000FA565 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9AD7A7292488E261000FA565 /* BaseTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTitleView.h; sourceTree = "<group>"; };
-		9AD7A72A2488E261000FA565 /* BaseTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTitleView.m; sourceTree = "<group>"; };
-		9AD7A72C2488E26A000FA565 /* BaseTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTitleView.xib; sourceTree = "<group>"; };
+		9AD7A7292488E261000FA565 /* BaseCustomTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCustomTitleView.h; sourceTree = "<group>"; };
+		9AD7A72A2488E261000FA565 /* BaseCustomTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCustomTitleView.m; sourceTree = "<group>"; };
+		9AD7A72C2488E26A000FA565 /* ZYCustomTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYCustomTitleView.xib; sourceTree = "<group>"; };
 		9AD7A72E2488E596000FA565 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9AD7A7572488F4A2000FA565 /* UIColor+ZYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZYExtension.h"; sourceTree = "<group>"; };
 		9AD7A7582488F4A2000FA565 /* UIColor+ZYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZYExtension.m"; sourceTree = "<group>"; };
@@ -251,6 +254,9 @@
 		2D1DE2962909218000F5EBFE /* 自定义标题栏 */ = {
 			isa = PBXGroup;
 			children = (
+				9AD7A72C2488E26A000FA565 /* ZYCustomTitleView.xib */,
+				2D759244290A1AE600A7A7E7 /* ZYCustomTitleView.h */,
+				2D759245290A1AE600A7A7E7 /* ZYCustomTitleView.m */,
 				2D1DE297290921AD00F5EBFE /* TestCustomTitleViewViewController.h */,
 				2D1DE298290921AD00F5EBFE /* TestCustomTitleViewViewController.m */,
 			);
@@ -436,9 +442,8 @@
 				9AD7A7112488D3EC000FA565 /* BaseViewController.m */,
 				9AD7A7202488D523000FA565 /* BaseTabBarController.h */,
 				9AD7A7212488D523000FA565 /* BaseTabBarController.m */,
-				9AD7A7292488E261000FA565 /* BaseTitleView.h */,
-				9AD7A72A2488E261000FA565 /* BaseTitleView.m */,
-				9AD7A72C2488E26A000FA565 /* BaseTitleView.xib */,
+				9AD7A7292488E261000FA565 /* BaseCustomTitleView.h */,
+				9AD7A72A2488E261000FA565 /* BaseCustomTitleView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -818,7 +823,7 @@
 				9AD7A67A2488C001000FA565 /* Main.storyboard in Resources */,
 				2D1DE28F29091F3300F5EBFE /* EHFormResources.bundle in Resources */,
 				2D1DE29129091F3300F5EBFE /* EHTapTableViewCell.xib in Resources */,
-				9AD7A72D2488E26A000FA565 /* BaseTitleView.xib in Resources */,
+				9AD7A72D2488E26A000FA565 /* ZYCustomTitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,8 +895,9 @@
 				2D1DE29229091F3300F5EBFE /* EHTapTableViewCell.m in Sources */,
 				9ADA4A44249215CA00D3F2E8 /* TooLongTitleViewController.m in Sources */,
 				9ADA4A322491FE8800D3F2E8 /* UIViewDemoViewController.m in Sources */,
-				9AD7A72B2488E261000FA565 /* BaseTitleView.m in Sources */,
+				9AD7A72B2488E261000FA565 /* BaseCustomTitleView.m in Sources */,
 				9ABEC9452497482C00DF2C1A /* BackButtonHookViewController.m in Sources */,
+				2D759246290A1AE600A7A7E7 /* ZYCustomTitleView.m in Sources */,
 				9AD7A70E2488D3C7000FA565 /* AppViewController.m in Sources */,
 				9AD7A71B2488D46F000FA565 /* NewsViewController.m in Sources */,
 				9A818E572489E83E003EC518 /* UIViewController+BackButtonHandler.m in Sources */,

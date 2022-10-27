@@ -38,8 +38,11 @@
         // 配置导航栏全局样式
         UINavigationBarAppearance *naviAppearance = [[UINavigationBarAppearance alloc] init];
         naviAppearance.backgroundColor = [UIColor whiteColor];
+        // 配置导航栏默认背景颜色
         [UINavigationBar appearance].standardAppearance = naviAppearance;
         [UINavigationBar appearance].scrollEdgeAppearance = naviAppearance;
+        // 配置导航栏默认按钮颜色和文字颜色
+        [UINavigationBar appearance].tintColor = [UIColor redColor];
         // 配置tabBar全局样式
         UITabBarAppearance *tabBarAppearance = [[UITabBarAppearance alloc] init];
         tabBarAppearance.backgroundColor = [UIColor whiteColor];
@@ -47,9 +50,9 @@
         if (@available(iOS 15, *)) {
             [UITabBar appearance].scrollEdgeAppearance = tabBarAppearance;
         }
-        // 设置选中颜色
+        // 配置tabBar选中颜色
         [UITabBar appearance].tintColor = RGBA(6, 181, 141, 1);
-        // 设置未选中颜色
+        // 配置tabBar未选中颜色
         [UITabBar appearance].unselectedItemTintColor = RGBA(73, 73, 73, 1);
     }
 }

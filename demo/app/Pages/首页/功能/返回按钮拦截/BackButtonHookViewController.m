@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.baseTitleView.titleLabel.text = @"返回按钮拦截";
+    self.navigationItem.title = @"返回按钮拦截";
 }
 
 /*

@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     
     
-    self.baseTitleView.titleLabel.text = @"挡不着的!!! 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
+//    self.customTitleView.titleLabel.text = @"挡不着的!!! 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
     
     
     
